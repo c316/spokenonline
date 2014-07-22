@@ -1,0 +1,15 @@
+body {
+	background-color: #12b5ea;
+}
+.v-center {
+  margin-top:4%;
+}
+.container-full {
+	min-height:100%;
+}
+.topPadding {
+	margin-top: 200px;
+}
+.center-x {
+	text-align:center;
+}
