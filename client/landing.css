@@ -1,0 +1,30 @@
+html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0 0;
+    }
+
+.container {
+	height: 100%;
+        display: table;
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+}
+/* #left, #right{
+	height: 100vh;
+} */
+.row-fluid {
+        height: 100%;
+        display: table-cell;
+        vertical-align: middle;
+        width: 100%;
+    }
+   .centering {
+        float: none;
+        margin: 0 auto;
+    }
+
+#left, #right{
+	height: 100vh;
+}

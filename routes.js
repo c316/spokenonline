@@ -10,9 +10,11 @@ Router.configure({
 });
 
 Router.map(function () {
-  this.route('main', {path: '/',
-	data: function () {
-      	return $("#DateCountdown").TimeCircles();
+  this.route('landing', {path: '/',
+  });
+  this.route('main', {path: '/main',
+  data: function () {
+        return $("#DateCountdown").TimeCircles();
     }
   });
 });

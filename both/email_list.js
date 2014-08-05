@@ -1,0 +1,1 @@
+Email_List = new Meteor.Collection('email_list');

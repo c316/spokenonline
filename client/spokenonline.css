@@ -20,3 +20,9 @@ h3 {
 h1 {
 	margin-top: 0;
 }
+.cursorPointer {
+	cursor: pointer;
+}
+.clearBackground {
+	background-color: #12b5ea;
+}
