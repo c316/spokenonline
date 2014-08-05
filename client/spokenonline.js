@@ -1,6 +1,3 @@
-if (Meteor.isClient) {
-
-
   Template.main.events({
     
     'click input': function () {
@@ -9,25 +6,28 @@ if (Meteor.isClient) {
         console.log("You pressed the button");
     },
     'click [name=learnMore]': function(e,tmpl) {
-      Session.set("showVideo", "false");
-      Session.set("showRegisterNow", "false");
       Session.set("showLearnMore", "true");      
     },
-    'click [name=registerNow]': function(e,tmpl) {
+    'click [name=video]': function(e,tmpl) {
       Session.set("showLearnMore", "false");
-      Session.set("showVideo", "false");
-      Session.set("showRegisterNow", "true");
-    },
-    'click [name=promoVideo]': function(e,tmpl) {
-      Session.set("showLearnMore", "false");
-      Session.set("showRegisterNow", "false");
-      Session.set("showVideo", "true");
     }
   });
 
   Template.main.helpers({
-    greeting: function () {
-      return "Welcome to spokenonline.";
+    showVideo: function () {
+      var setThis = Session.equals("showVideo");
+      console.log(setThis);
+      return setThis;
+    },
+    showLearnMore: function () {
+      var setThis = Session.equals("showLearnMore");
+      console.log(setThis);
+      return setThis;
+    },
+    log: function () {
+      console.log(this);
+    },
+    insertContent: function () {
     }
 });
 
@@ -64,12 +64,3 @@ Template.main.rendered = function () {
       }
     });
 };
-
-
-}
-
-if (Meteor.isServer) {
-  Meteor.startup(function () {
-    // code to run on server at startup
-  });
-}
