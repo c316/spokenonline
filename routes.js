@@ -10,7 +10,7 @@ Router.configure({
 });
 
 Router.map(function () {
-  this.route('landing', {path: '/',
+  this.route('landing', {path: '/spokenonline',
   });
   this.route('main', {path: '/main',
   data: function () {
