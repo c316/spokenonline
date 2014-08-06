@@ -33,13 +33,13 @@ height: 100%;
     position: fixed;
     left: 0;
     right: 0;
-    top: 10%;
-    top: 10vh;
+    top: 20%;
+    top: 20vh;
 }
 .textRight, .textLeft {
     text-align: center;
-    top: 55%;
-    top: 55vh;
+    top: 45%;
+    top: 45vh;
     right: 0;
     left: 0;
     max-height: 100%;

@@ -12,7 +12,12 @@ Router.configure({
 Router.map(function () {
   this.route('landing', {path: '/spokenonline',
   });
-  this.route('main', {path: '/main',
+  this.route('watch', {path: '/spokenonline/watch',
+  data: function () {
+        return $("#DateCountdown").TimeCircles();
+    }
+  });
+  this.route('attend', {path: '/spokenonline/attend',
   data: function () {
         return $("#DateCountdown").TimeCircles();
     }

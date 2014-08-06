@@ -36,7 +36,7 @@ function setupDate() {
     $('#DateCountdown').hide();
   }
 }
-  Template.main.events({
+  Template.watch.events({
     'click [name=learnMore]': function(e,tmpl) {
       Session.set("showLearnMore", true);      
       log(Session.get("showLearnMore"));
@@ -59,7 +59,7 @@ function setupDate() {
     }
   });
 
-  Template.main.helpers({
+  Template.watch.helpers({
     showVideo: function () {
       return Session.get("showVideo");
     },
@@ -73,9 +73,19 @@ function setupDate() {
     }
 });
 
-Template.main.created = function () {
+Template.watch.created = function () {
 //Session.set("showVideo", "false");  
 };
-Template.main.rendered = function () {
+Template.watch.rendered = function () {
    
 };
+Template.landing.events({
+  'click [name=viewPage]': function() {
+      console.log("viewPage Clicked");
+      Router.go('watch');
+    },
+    'click [name=attendPage]': function() {
+      console.log("attendPage Clicked");
+      Router.go('attend');
+    }
+  });
