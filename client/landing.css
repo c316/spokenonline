@@ -20,13 +20,15 @@ height: 100%;
     width: 50%;
     background-color: #12b5ea;
     height: 100%;
+    height: 100vh;
 }
 
 .floatright {
     float: right;
+    width: 50%;
     background-color: white;
     height: 100%;
-    width: 50%;
+    height: 100vh;
 }
 .fixedTitle {
     text-align: center;
@@ -62,39 +64,37 @@ height: 100%;
         width: 250px;
         height: 150px;
     }
-    .logoImage {
-        vertical-align: baseline;
-        margin-left: 10px;
-        width: 250px;
-    }
 }
 @media (min-width: 992px) {
     .fullWidthButton {
         width: 375px;
         height: 150px;
     }
-    .logoImage {
-        vertical-align: baseline;
-        margin-left: 10px;
-        width: 375px;
-    }
 }
-
-/*
-#left, #right{
-    height: 100vh;
+.whiteButton {
+    background-color: white;
+    color: #12b5ea;
 }
-.row-fluid {
-        height: 100%;
-        display: table-cell;
-        vertical-align: middle;
-        width: 100%;
-    }
-   .centering {
-        float: none;
-        margin: 0 auto;
-    }
-
-#left, #right{
-    height: 100vh;
-} */
+.blueButton {
+    background-color: #12b5ea;
+}
+.darkBlueButton {
+    background-color: #2a94d6;
+}
+.whiteButton:hover {
+    background-color: #12b5ea;
+    color: white;
+    box-shadow: inset 0 0 0 4px white, 0 0 1px rgba(0, 0, 0, 0);
+}
+.blueButton:hover {
+    background-color: white;
+    border-color: black;
+    color: #12b5ea;
+    box-shadow: inset 0 0 0 4px #12b5ea, 0 0 1px rgba(0, 0, 0, 0);
+}
+.darkBlueButton:hover {
+    background-color: #415b76;
+    border-color: black;
+    color: white;
+    box-shadow: inset 0 0 0 4px white, 0 0 1px rgba(0, 0, 0, 0);
+}

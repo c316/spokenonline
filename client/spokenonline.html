@@ -3,11 +3,7 @@
 </head>
 <body>
 </body>
-<template name="footer">
-	<div class="text-center semiTransparent">
-		<a href="https://trashmountain.com"><img class="logoImage" src="https://trashmountain.com/system/wp-content/uploads/2012/07/bw_logo.png"></a>
-	</div>
-</template>
+
 <template name="watch">
 	<div class="container-full text-center">
 		<div class="col-lg-12 text-center" >
@@ -35,14 +31,14 @@
 					<div class="form-group">
 						<div class="btn-group btn-group-justified noTopPadding">
 						  	<div class="btn-group noTopPadding">
-							    <button type="button" class="btn btn-info btn-lg" name="learnMore">Learn More</button>
+							    <button type="button" class="btn btn-lg whiteButton" name="learnMore">Learn More</button>
 							</div>
 							<div class="btn-group noTopPadding moveButtonDown">
-						    	<button type="button" class="btn btn-danger btn-lg marginBottom" name="registerNow">Register</button>
-								<input type="text" class="form-control input-lg" title="Enter you email." placeholder="Enter your email address" autofocus="autofocus" required="true">
+						    	<button type="button" class="btn btn-info btn-lg marginBottom darkBlueButton" name="registerNow">Register</button>
+								<input type="text" class="form-control input-lg"  title="Enter you email." placeholder="Enter your email address" autofocus="autofocus" required="true">
 						  	</div>
 						  	<div class="btn-group noTopPadding">
-						    	<button type="button" class="btn btn-danger btn-lg" name="video">Video</button>
+						    	<button type="button" class="btn btn-danger btn-lg whiteButton" name="video">Video</button>
 						  	</div>
 				  			</div>
 				  		</div>
@@ -58,9 +54,7 @@
     	{{else}}
     	{{/if}}
 	</div>
-	<div class="footer">
-  		{{> footer}}
-  	</div>
+		{{> footer}}
 </template>
 
 <template name="video">
@@ -75,11 +69,17 @@
 
 <template name="logo">
 	<div class="jumbotron clearBackground">
-		<img src="/spokenonline/images/white_spoken_logo_2014_01.png">
+		<img src="https://trashmountain.com/spokenonline/images/white_spoken_logo_2014_01.png">
 	</div>
 </template>
 
 <template name="time">
 	<h1 name="timeHeading" class="cursorPointer">LIVE IN</h1>
 	<div id="DateCountdown" data-date="2014-10-12 17:00:00"></div>
+</template>
+
+<template name="footer">
+	<div class="text-center">
+		<a href="https://trashmountain.com"><img class="logoImage" src="https://trashmountain.com/system/wp-content/uploads/2012/07/bw_logo.png"></a>
+	</div>
 </template>
