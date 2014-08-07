@@ -38,19 +38,48 @@ height: 100%;
 }
 .textRight, .textLeft {
     text-align: center;
-    top: 45%;
-    top: 45vh;
+    top: 10%;
+    top: 10vh;
     right: 0;
     left: 0;
     max-height: 100%;
     position: relative;
+    text-transform: uppercase;
 }
 .info-box {
 }
-.fullWidthButton {
-    width: 300px;
-    height: 100px;
+.logoImage {
+    vertical-align: baseline;
+    margin-left: 10px;
+    width: 250px;
 }
+.fullWidthButton {
+        width: 250px;
+        height: 120px;
+    }
+@media (min-width: 768px) {
+    .fullWidthButton {
+        width: 250px;
+        height: 150px;
+    }
+    .logoImage {
+        vertical-align: baseline;
+        margin-left: 10px;
+        width: 250px;
+    }
+}
+@media (min-width: 992px) {
+    .fullWidthButton {
+        width: 375px;
+        height: 150px;
+    }
+    .logoImage {
+        vertical-align: baseline;
+        margin-left: 10px;
+        width: 375px;
+    }
+}
+
 /*
 #left, #right{
     height: 100vh;
