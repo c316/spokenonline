@@ -3,5 +3,5 @@
 /*****************************************************************************/
 
 Meteor.publish('email_list', function (input) {
-	 return email_list.find({_id: input});
+	 return Email_List.find({_id: input});
 });
