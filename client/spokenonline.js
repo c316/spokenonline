@@ -48,6 +48,15 @@ function setupDate() {
       
       //prevent the default form action on this form
       e.preventDefault();
+      console.log($(this));
+      var has_empty = false;
+
+   $(this).find( 'input[type!="hidden"]' ).each(function () {
+
+      if ( ! $(this).val() ) { has_empty = true; return false; }
+   });
+
+   if ( has_empty ) { return false; }
 
       //put form data into variable
       //for after cutoff date we only need email,
@@ -63,11 +72,19 @@ function setupDate() {
       //insert the form data into the mongo collection
       form._id = Email_List.insert(form);
 
-      //Tell the user that we got the form data
-      alert("Good Work: " + form._id);
-
       //Log the ID to the console
       console.log(form._id);
+
+      //Insert ID into the modal 
+      $('#modalContent').text("You rock! Check your email for more info from us.");
+
+      //Reset the form
+      $('#signupForm')[0].reset();
+      $('#fname').hide(400);
+      $('#lname').hide(600);
+      $('#email').appendTo("#moveTo").animate(800);
+      $('#email').prop('disabled', true);
+      $('#email').attr("placeholder", 'We got it.');
     },
     //keypress input detection for autofilling form with test data
     'keypress input': function(e) {

@@ -7,7 +7,8 @@
       "iron-router": {},
       "iron-router-progress": {},
       "moment": {},
-      "mandrill": {}
+      "mandrill": {},
+      "font-awesome": {}
     },
     "packages": {
       "jquery-ui": {
@@ -39,6 +40,11 @@
         "git": "https://github.com/timmyg/meteor-mandrill.git",
         "tag": "v0.0.6",
         "commit": "211be350989440403f8171031a97dd80b6c924ec"
+      },
+      "font-awesome": {
+        "git": "https://github.com/nate-strauser/meteor-font-awesome.git",
+        "tag": "v4.1.0",
+        "commit": "ce6b1e92715d1938babc5d69c655c17e387f5926"
       },
       "iron-layout": {
         "git": "https://github.com/EventedMind/iron-layout.git",

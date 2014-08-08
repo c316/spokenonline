@@ -110,3 +110,6 @@ height: 100%;
     color: white;
     box-shadow: inset 0 0 0 4px white, 0 0 1px rgba(0, 0, 0, 0);
 }
+.removePaddingLeft {
+    padding-left: 0;
+}   
