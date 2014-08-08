@@ -120,3 +120,25 @@ height: 100%;
 .removePaddingLeft {
     padding-left: 0;
 }   
+
+/* Arrows */
+.arrow-right {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 0; 
+    height: 0; 
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+    border-left: 60px solid #12b5ea;
+}
+.arrow-left {
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    width: 0; 
+    height: 0; 
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+    border-right: 60px solid white;
+}
