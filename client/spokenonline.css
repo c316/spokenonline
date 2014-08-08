@@ -58,3 +58,6 @@ border-radius: 6px;
 .semiTransparent {
 	opacity: .6;	
 }
+.whiteText {
+	color: white;
+}

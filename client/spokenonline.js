@@ -1,3 +1,10 @@
+function fillForm() {
+  console.log("Filled form");
+  $('#email').val("support@trashmountain.com");
+  $('#fname').val("Test");
+  $('#lname').val("Person");
+}
+
 function log() {
   console.log(this);
 }
@@ -37,10 +44,51 @@ function setupDate() {
   }
 }
   Template.watch.events({
+    'submit form': function (e, tmpl) {
+      
+      //prevent the default form action on this form
+      e.preventDefault();
+
+      //put form data into variable
+      //for after cutoff date we only need email,
+      //fname, lname
+      var form;
+      form = {
+      "email":      $('#email').val(),
+      "fname":      $('#fname').val(),
+      "lname":      $('#lname').val(),
+      "created_at": new Date().getTime()
+      }
+
+      //insert the form data into the mongo collection
+      form._id = Email_List.insert(form);
+
+      //Tell the user that we got the form data
+      alert("Good Work: " + form._id);
+
+      //Log the ID to the console
+      console.log(form._id);
+    },
+    //keypress input detection for autofilling form with test data
+    'keypress input': function(e) {
+      if(e.which === 17) { //17 is ctrl + q
+        fillForm();
+      }
+    },
+    //Show the other form fields, animate them too
+    'keyup #email': function(e,templ) {
+      $('#fname').show(400);
+      $('#lname').show(600);
+      //Move the registerNow button to the bottom so users know what this is
+      //for (to submit the form)
+      $('[name=registerNow]').appendTo("#moveTo").animate(800);
+    },
+    //Show more info about the event, move the screen down too.
     'click [name=learnMore]': function(e,tmpl) {
       Session.set("showLearnMore", true);      
       log(Session.get("showLearnMore"));
     },
+    //Show the Video, move the screen to top.
     'click [name=video]': function(e,tmpl) {
       Session.set("showVideo", true);
       log(Session.get("showVideo"));

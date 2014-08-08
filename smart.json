@@ -3,6 +3,8 @@
     "jquery-ui": {},
     "bootstrap-3": {},
     "iron-router": {},
-    "iron-router-progress": {}
+    "iron-router-progress": {},
+    "moment": {},
+    "mandrill": {}
   }
 }

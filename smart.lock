@@ -5,7 +5,9 @@
       "jquery-ui": {},
       "bootstrap-3": {},
       "iron-router": {},
-      "iron-router-progress": {}
+      "iron-router-progress": {},
+      "moment": {},
+      "mandrill": {}
     },
     "packages": {
       "jquery-ui": {
@@ -27,6 +29,16 @@
         "git": "https://github.com/Multiply/iron-router-progress.git",
         "tag": "v0.4.1",
         "commit": "496fcda9a6ec352b4733725f60c6f280250c3541"
+      },
+      "moment": {
+        "git": "https://github.com/acreeger/meteor-moment.git",
+        "tag": "v2.6.0",
+        "commit": "26156df681750fd6e6ed77043eef32b6653ebbdf"
+      },
+      "mandrill": {
+        "git": "https://github.com/timmyg/meteor-mandrill.git",
+        "tag": "v0.0.6",
+        "commit": "211be350989440403f8171031a97dd80b6c924ec"
       },
       "iron-layout": {
         "git": "https://github.com/EventedMind/iron-layout.git",
