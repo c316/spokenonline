@@ -47,7 +47,7 @@ function setupDate() {
     'submit form': function (e, tmpl) {
       
       //prevent the default form action on this form
-      e.preventDefault();
+      //e.preventDefault();
       console.log($(this));
       var has_empty = false;
 

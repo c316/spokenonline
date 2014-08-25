@@ -15,4 +15,3 @@ suite('Email_List', function() {
     });
   });
 });
-

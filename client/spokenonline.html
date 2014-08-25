@@ -13,14 +13,14 @@
 				{{/if}}
 			</div>
 
-			<div class="col-lg-10 col-lg-offset-1">
+			<div class="col-lg-8 col-lg-offset-2">
 				{{#if showVideo}}
 					{{> video}}
 				{{else}}
 					{{> logo}}
 				{{/if}}
 			</div>
-			<div class="col-lg-10 col-lg-offset-1">
+			<div class="col-lg-8 col-lg-offset-2">
 				<form class="form-horizontal col-md-12 signupForm" id="signupForm">
 					<div class="form-group">
 						<div class="btn-group btn-group-justified noTopPadding">
@@ -47,7 +47,7 @@
 								</div>
 								<div class="centerContents">
                                     <ul id="socialSharing" class="paddingIcons">
-                                        <li><a href="https://www.facebook.com/sharer/sharer.php?u=trashmoutain.com/spokenonline/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="https://www.facebook.com/sharer/sharer.php" target="_blank"><i class="fa fa-facebook"></i></a></li>
                                         <!--<li><a href="http://linkedin.com/"><i class="fa fa-linkedin"></i></a></li>-->
                                         <li><a href="https://twitter.com/share?url=https://trashmountain.com/spokenonline/watch" target="_blank"><i class="fa fa-twitter"></i></a></li>
                                         <li><a href="https://plus.google.com/share?url=https://trashmountain.com/spokenonline/watch" target="_blank"><i class="fa fa-google-plus"></i> </a></li>
@@ -77,7 +77,7 @@
 
 <template name="video">
 	<div class="jumbotron clearBackground">
-		<img src="http://placehold.it/600x300">
+        <iframe width="853" height="480" src="//www.youtube.com/embed/y-jBJs2kXRo?rel=0;v=quwebVjAEJA&vq=hd720" frameborder="0" allowfullscreen></iframe>
 	</div>
 </template>
 
@@ -87,7 +87,7 @@
 
 <template name="logo">
 	<div class="jumbotron clearBackground">
-		<img src="/images/white_spoken_logo_2014_02.png">
+		<img src="https://trashmountain.com/spokenonline/images/blue_logo_comp.png">
 	</div>
 </template>
 
