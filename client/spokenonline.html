@@ -2,7 +2,7 @@
 	<div class="container-full text-center">
 		<div class="col-lg-12 text-center" >
 			<div class="col-lg-6 col-lg-offset-3" >
-				
+
 				{{#if showTime}}
 					{{> time}}
 				{{else}}
@@ -38,18 +38,21 @@
 								    </div>
 								  </div>
 								</div>
-								
+
 								<input type="email" class="form-control input-lg"  title="Enter you email." placeholder="Enter your email address" autofocus="autofocus" required id="email">
 								<input type="text" class="form-control input-lg" id="fname" title="Enter you first name." placeholder="First Name" style="display:none" required>
 								<input type="text" class="form-control input-lg" id="lname" title="Enter you last name." placeholder="Last Name" style="display:none" required>
+                                <div><textarea id="address" class="form-control input-lg" cols="30" rows="4" placeholder="Address (we want to send you some information about the event)" style="display:none" required></textarea></div>
 								<div id="moveTo">
 								</div>
-								<ul id="socialSharing" class="paddingIcons">
-    <li><a href="http://facebook.com/"><i class="fa fa-facebook"></i></a></li>
-    <li><a href="http://linkedin.com/"><i class="fa fa-linkedin"></i></a></li>
-    <li><a href="http://twitter.com/"><i class="fa fa-twitter"></i></a></li>
-    <li><a href="http://plus.google.com/"><i class="fa fa-google-plus"></i> </a></li>
-</ul>
+								<div class="centerContents">
+                                    <ul id="socialSharing" class="paddingIcons">
+                                        <li><a href="https://www.facebook.com/sharer/sharer.php?u=trashmoutain.com/spokenonline/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                        <!--<li><a href="http://linkedin.com/"><i class="fa fa-linkedin"></i></a></li>-->
+                                        <li><a href="https://twitter.com/share?url=https://trashmountain.com/spokenonline/watch" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="https://plus.google.com/share?url=https://trashmountain.com/spokenonline/watch" target="_blank"><i class="fa fa-google-plus"></i> </a></li>
+                                    </ul>
+                                 </div>
 
 						  	</div>
 						  	<div class="btn-group noTopPadding">

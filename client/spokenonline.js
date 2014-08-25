@@ -66,22 +66,29 @@ function setupDate() {
       "email":      $('#email').val(),
       "fname":      $('#fname').val(),
       "lname":      $('#lname').val(),
+	  "address":    $('#address').val(),
       "created_at": new Date().getTime()
       }
 
-      //insert the form data into the mongo collection
-      form._id = Email_List.insert(form);
+	    Meteor.call("subscribe", form, function(error, result) {
+		    if (result) {
+			    //Insert ID into the modal
+			    $('#modalContent').text("You rock! Check your email for more info from us. Please share with your friends.");
+			    $('.centerContents').show();
 
-      //Log the ID to the console
-      console.log(form._id);
-
-      //Insert ID into the modal 
-      $('#modalContent').text("You rock! Check your email for more info from us.");
+			    //Log the ID to the console
+			    console.log(result);
+		    } else {
+			    //Log the ID to the console
+			    console.log(error);
+		    }
+	    });
 
       //Reset the form
       $('#signupForm')[0].reset();
       $('#fname').hide(400);
       $('#lname').hide(600);
+	  $('#address').hide(800);
       $('#email').appendTo("#moveTo").animate(800);
       $('#email').prop('disabled', true);
       $('#email').attr("placeholder", 'We got it.');
@@ -93,12 +100,21 @@ function setupDate() {
       }
     },
     //Show the other form fields, animate them too
-    'keyup #email': function(e,templ) {
-      $('#fname').show(400);
-      $('#lname').show(600);
+	'keyup #email': function(e,templ) {
+	$('#fname').show(400, function () {
+	  $('#fname').css("marginTop", "5px")
+	});
+	$('#lname').show(600, function () {
+	  $('#lname').css("marginTop", "5px")
+	});
+	$('#address').show(800, function () {
+	    $('#address').css("marginTop", "5px")
+	});
       //Move the registerNow button to the bottom so users know what this is
       //for (to submit the form)
-      $('[name=registerNow]').appendTo("#moveTo").animate(800);
+      $('[name=registerNow]').appendTo("#moveTo").animate(800, function () {
+	      $('#moveTo').css("marginTop", "10px")
+      });
     },
     //Show more info about the event, move the screen down too.
     'click [name=learnMore]': function(e,tmpl) {
@@ -142,15 +158,5 @@ Template.watch.created = function () {
 //Session.set("showVideo", "false");  
 };
 Template.watch.rendered = function () {
-   
+	//$('.centerContents').hide();
 };
-Template.landing.events({
-  'click [name=viewPage]': function() {
-      console.log("viewPage Clicked");
-      Router.go('watch');
-    },
-    'click [name=attendPage]': function() {
-      console.log("attendPage Clicked");
-      Router.go('attend');
-    }
-  });

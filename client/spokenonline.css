@@ -72,6 +72,7 @@ ul {
  
 ul li {
     list-style-type: none;
+    position: relative;
     float: left;
 }
  
@@ -102,4 +103,12 @@ ul li a i {
 }
 ul li a i:hover {
     opacity: .7;
+}
+.centerContents {
+    position:relative;
+    left:25%;
+    margin-right: 40px;
+}
+.moveTo {
+    padding-top: 15px;
 }

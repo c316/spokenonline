@@ -1,27 +1,27 @@
 Email_List.allow({
   insert: function (userId, doc) {
-    return true;
+    return false;
   },
 
   update: function (userId, doc, fieldNames, modifier) {
-    return true;
+    return false;
   },
 
   remove: function (userId, doc) {
-    return true;
+    return false;
   }
 });
 
 Email_List.deny({
   insert: function (userId, doc) {
-    return false;
+    return true;
   },
 
   update: function (userId, doc, fieldNames, modifier) {
-    return false;
+    return true;
   },
 
   remove: function (userId, doc) {
-    return false;
+    return true;
   }
 });
