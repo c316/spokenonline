@@ -8,7 +8,8 @@
       "iron-router-progress": {},
       "moment": {},
       "mandrill": {},
-      "font-awesome": {}
+      "font-awesome": {},
+      "parsley.js": {}
     },
     "packages": {
       "jquery-ui": {
@@ -45,6 +46,11 @@
         "git": "https://github.com/nate-strauser/meteor-font-awesome.git",
         "tag": "v4.1.0",
         "commit": "ce6b1e92715d1938babc5d69c655c17e387f5926"
+      },
+      "parsley.js": {
+        "git": "https://github.com/amrali/parsleyjs-meteor.git",
+        "tag": "v2.0.3",
+        "commit": "2608796c7851759a9ee62461fe07a0c32d6e8f31"
       },
       "iron-layout": {
         "git": "https://github.com/EventedMind/iron-layout.git",

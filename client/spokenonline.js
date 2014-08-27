@@ -52,7 +52,7 @@ function setupDate() {
     'submit form': function (e, tmpl) {
 	    //prevent the default form action on this form
 	    e.preventDefault();
-	    console.log($(this));
+	    /*console.log($(this));
 	    var has_empty = false;
 
 	    $(this).find( 'input[type!="hidden"]' ).each(function () {
@@ -60,7 +60,7 @@ function setupDate() {
 		    if ( ! $(this).val() ) { has_empty = true; return false; }
 	    });
 
-	    if ( has_empty ) { return false; }
+	    if ( has_empty ) { return false; }*/
 
 	    //put form data into variable
 	    //for after cutoff date we only need email, fname and lname
@@ -189,4 +189,5 @@ Template.watch.created = function () {
 };
 Template.watch.rendered = function () {
 	//$('.centerContents').hide();
+	$('#signupForm').parsley();
 };

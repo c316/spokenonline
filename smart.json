@@ -6,6 +6,7 @@
     "iron-router-progress": {},
     "moment": {},
     "mandrill": {},
-    "font-awesome": {}
+    "font-awesome": {},
+    "parsley.js": {}
   }
 }
