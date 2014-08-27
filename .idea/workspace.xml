@@ -139,7 +139,7 @@
         <entry file="file://$PROJECT_DIR$/client/head.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.8063241" vertical-offset="0" max-vertical-offset="759">
-              <caret line="36" column="53" selection-start-line="36" selection-start-column="53" selection-end-line="36" selection-end-column="53" />
+              <caret line="36" column="63" selection-start-line="36" selection-start-column="63" selection-end-line="36" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -709,7 +709,7 @@
     <entry file="file://$PROJECT_DIR$/client/head.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8063241" vertical-offset="0" max-vertical-offset="759">
-          <caret line="36" column="53" selection-start-line="36" selection-start-column="53" selection-end-line="36" selection-end-column="53" />
+          <caret line="36" column="63" selection-start-line="36" selection-start-column="63" selection-end-line="36" selection-end-column="63" />
           <folding />
         </state>
       </provider>
