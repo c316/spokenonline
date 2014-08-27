@@ -22,7 +22,7 @@
 			<div class="col-lg-8 col-lg-offset-2">
 				<form class="form-horizontal col-md-12 signupForm" id="signupForm">
 					<div class="form-group">
-						<div class="btn-group btn-group-justified smallTopPadding">
+						<div class="btn-group btn-group-justified smallTopPadding noBottomPadding">
 						  	<div class="btn-group smallTopPadding">
 							    <button onclick="parent.scrollTo(0, 500); return true" type="button" class="btn btn-lg whiteButton" name="learnMore"><h6>Learn More</h6></button>
 							</div>
@@ -38,11 +38,18 @@
 								  </div>
 								</div>
 
-								<input type="email" class="form-control input-lg"  title="Enter you email." placeholder="Enter your email address" autofocus="autofocus" required id="email">
-								<input type="text" class="form-control input-lg" id="fname" title="Enter you first name." placeholder="First Name" style="display:none" required>
-								<input type="text" class="form-control input-lg" id="lname" title="Enter you last name." placeholder="Last Name" style="display:none" required>
-                                <div><textarea id="address" class="form-control input-lg" cols="30" rows="4" placeholder="Address (we want to send you some information about the event)" style="display:none" required></textarea></div>
-								<div id="moveTo">
+
+                                <div class="form-group">
+                                    <input type="email" class="form-control input-lg"  title="Enter you email." placeholder="Enter your email address" autofocus="autofocus" required id="email">
+                                    <input type="text" class="form-control input-lg" id="fname" title="Enter you first name." placeholder="First Name" style="display:none;">
+                                    <input type="text" class="form-control input-lg" id="lname" title="Enter you last name." placeholder="Last Name" style="display:none;">
+                                    <input type="text" class="form-control input-lg" id="address" placeholder="Address" style="display:none;">
+                                    <input type="text" class="form-control input-lg" id="city" placeholder="City" style="display:none;">
+                                    <input type="text" class="form-control input-lg" id="state" placeholder="State" style="display:none;">
+                                    <input type="text" class="form-control input-lg" id="zip" placeholder="Postal Code" style="display:none;">
+                                </div>
+
+                                <div id="moveTo">
 								</div>
 								<div class="centerContents">
                                     <ul id="socialSharing" class="paddingIcons">
@@ -63,10 +70,10 @@
 			</div>
 		</div>
 		{{#if showLearnMore}}
-			<div id="moreInfoSection" class="col-lg-12">
-				<h1>Hello Landing</h1>
-				<p class="lead">A sign-up page example for Bootstrap 3</p>
-				<br>
+			<div id="moreInfoSection" class="col-lg-8 col-lg-offset-2">
+				<h1>ONLINE LIVE STREAM</h1>
+				<p class="lead">Available live here</p>
+                <p>Spoken 2014 promises to be an evening you will not want to miss!  Throughout the evening, you will experience the heart and vision of Trash Mountain Project with all-new videos, live music, testimonials, international speakers, livelihood project demonstrations, and much more.</p>
 	    	</div>
     	{{else}}
     	{{/if}}
@@ -76,7 +83,7 @@
 
 <template name="video">
 	<div class="jumbotron clearBackground">
-        <iframe width="853" height="480" src="//www.youtube.com/embed/y-jBJs2kXRo?rel=0;v=quwebVjAEJA&vq=hd720" frameborder="0" allowfullscreen></iframe>
+        <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='http://www.youtube.com/embed/y-jBJs2kXRo' frameborder='0' allowfullscreen></iframe></div>
 	</div>
 </template>
 

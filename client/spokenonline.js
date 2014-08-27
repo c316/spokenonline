@@ -1,8 +1,12 @@
 function fillForm() {
-  console.log("Filled form");
-  $('#email').val("support@trashmountain.com");
-  $('#fname').val("Test");
-  $('#lname').val("Person");
+	console.log("Filled form");
+	$('#email').val("support@trashmountain.com");
+	$('#fname').val("Test");
+	$('#lname').val("Person");
+	$('#address').val("Address");
+	$('#city').val("City");
+	$('#state').val("State");
+	$('#zip').val("Zip");
 }
 
 function log() {
@@ -44,32 +48,45 @@ function setupDate() {
   }
 }
   Template.watch.events({
+
     'submit form': function (e, tmpl) {
-      
-      //prevent the default form action on this form
-      //e.preventDefault();
-      console.log($(this));
-      var has_empty = false;
+	    //prevent the default form action on this form
+	    e.preventDefault();
+	    console.log($(this));
+	    var has_empty = false;
 
-   $(this).find( 'input[type!="hidden"]' ).each(function () {
+	    $(this).find( 'input[type!="hidden"]' ).each(function () {
 
-      if ( ! $(this).val() ) { has_empty = true; return false; }
-   });
+		    if ( ! $(this).val() ) { has_empty = true; return false; }
+	    });
 
-   if ( has_empty ) { return false; }
+	    if ( has_empty ) { return false; }
 
-      //put form data into variable
-      //for after cutoff date we only need email,
-      //fname, lname
-      var form;
-      form = {
-      "email":      $('#email').val(),
-      "fname":      $('#fname').val(),
-      "lname":      $('#lname').val(),
-	  "address":    $('#address').val(),
-      "created_at": new Date().getTime()
-      }
+	    //put form data into variable
+	    //for after cutoff date we only need email, fname and lname
+	    var form;
+	    form = {
+		    "email":      $('#email').val(),
+		    "fname":      $('#fname').val(),
+		    "lname":      $('#lname').val(),
+		    "address":    $('#address').val(),
+		    "city":       $('#city').val(),
+		    "state":      $('#state').val(),
+		    "zip":        $('#zip').val(),
+		    "created_at": new Date().getTime()
+	    }
 
+	    Meteor.call("mailchimpSubscribe", form, function(error, result) {
+		    if (result) {
+			    //Log the results to the console
+			    console.log(result);
+		    } else {
+			    //Log the error to the console
+			    console.log(error);
+		    }
+	    });
+
+	    //Call the subscribe function to write this to the local database
 	    Meteor.call("subscribe", form, function(error, result) {
 		    if (result) {
 			    //Insert ID into the modal
@@ -84,14 +101,18 @@ function setupDate() {
 		    }
 	    });
 
-      //Reset the form
-      $('#signupForm')[0].reset();
-      $('#fname').hide(400);
-      $('#lname').hide(600);
-	  $('#address').hide(800);
-      $('#email').appendTo("#moveTo").animate(800);
-      $('#email').prop('disabled', true);
-      $('#email').attr("placeholder", 'We got it.');
+		//Reset the form
+		$('#signupForm')[0].reset();
+		$('#fname').hide(400);
+		$('#lname').hide(600);
+		$('#address').hide(800);
+		$('#city').hide(1000);
+		$('#state').hide(1200);
+		$('#zip').hide(1400);
+		$('#email').appendTo("#moveTo").animate(800);
+		$('#email').prop('disabled', true);
+		$('#email').attr("placeholder", 'We got it.');
+	    $('.moveButtonDown').css("paddingTop", "27px");
     },
     //keypress input detection for autofilling form with test data
     'keypress input': function(e) {
@@ -104,11 +125,20 @@ function setupDate() {
 	$('#fname').show(400, function () {
 	  $('#fname').css("marginTop", "5px")
 	});
-	$('#lname').show(600, function () {
+	$('#lname').show(500, function () {
 	  $('#lname').css("marginTop", "5px")
 	});
-	$('#address').show(800, function () {
+	$('#address').show(600, function () {
 	    $('#address').css("marginTop", "5px")
+	});
+	$('#city').show(700, function () {
+		$('#city').css("marginTop", "5px")
+	});
+	$('#state').show(800, function () {
+		$('#state').css("marginTop", "5px")
+	});
+	$('#zip').show(900, function () {
+		$('#zip').css("marginTop", "5px")
 	});
       //Move the registerNow button to the bottom so users know what this is
       //for (to submit the form)

@@ -51,7 +51,7 @@ border-radius: 6px;
 	padding-top: 5px;
 }
 .moveButtonDown {
-    padding-top: 46px;
+    padding-top: 65px;
 }
 .marginBottom {
 	margin-bottom: 10px;
@@ -121,6 +121,19 @@ ul li a i:hover {
 .topMargin {
     margin-top: 20px;
 }
-.buttonAlign {
-    margin-top: 40px;
+.noBottomPadding {
+    padding-bottom: 0;
+}
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }

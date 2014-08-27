@@ -66,16 +66,25 @@ height: 100%;
         width: 250px;
         height: 120px;
     }
-@media (min-width: 768px) {
+.buttonText {
+    font-size: 80%;
+}
+@media (min-width: 870px) {
     .fullWidthButton {
-        width: 250px;
+        width: 300px;
         height: 150px;
     }
+    .buttonText {
+        font-size: 90%;
+    }
 }
-@media (min-width: 992px) {
+@media (min-width: 1100px) {
     .fullWidthButton {
         width: 375px;
         height: 150px;
+    }
+    .buttonText {
+        font-size: 120%;
     }
 }
 .blueButton:hover {
