@@ -103,7 +103,7 @@ function setupDate() {
 		$('#email').appendTo("#moveTo").animate(800);
 		$('#email').prop('disabled', true);
 		$('#email').attr("placeholder", 'We got it.');
-	    $('.moveButtonDown').css("paddingTop", "98px");
+	    $('.moveButtonDown').css("paddingTop", "101px");
 	    $('html, body').animate({
 		    scrollTop: $("#topCol").offset().top
 	    }, 2000);
