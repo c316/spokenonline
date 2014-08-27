@@ -52,15 +52,6 @@ function setupDate() {
     'submit form': function (e, tmpl) {
 	    //prevent the default form action on this form
 	    e.preventDefault();
-	    /*console.log($(this));
-	    var has_empty = false;
-
-	    $(this).find( 'input[type!="hidden"]' ).each(function () {
-
-		    if ( ! $(this).val() ) { has_empty = true; return false; }
-	    });
-
-	    if ( has_empty ) { return false; }*/
 
 	    //put form data into variable
 	    //for after cutoff date we only need email, fname and lname
@@ -112,7 +103,10 @@ function setupDate() {
 		$('#email').appendTo("#moveTo").animate(800);
 		$('#email').prop('disabled', true);
 		$('#email').attr("placeholder", 'We got it.');
-	    $('.moveButtonDown').css("paddingTop", "27px");
+	    $('.moveButtonDown').css("paddingTop", "98px");
+	    $('html, body').animate({
+		    scrollTop: $("#topCol").offset().top
+	    }, 2000);
     },
     //keypress input detection for autofilling form with test data
     'keypress input': function(e) {
@@ -145,17 +139,13 @@ function setupDate() {
       $('[name=registerNow]').appendTo("#moveTo").animate(800, function () {
 	      $('#moveTo').css("marginTop", "10px")
       });
+		$('html, body').animate({
+			scrollTop: $("#email").offset().top
+		}, 2000);
     },
-    //Show more info about the event, move the screen down too.
-    'click [name=learnMore]': function(e,tmpl) {
-      Session.set("showLearnMore", true);      
-      log(Session.get("showLearnMore"));
-    },
-    //Show the Video, move the screen to top.
-    'click [name=video]': function(e,tmpl) {
-      Session.set("showVideo", true);
-      log(Session.get("showVideo"));
-    },
+	'click [name=learnMore]': function(e,tmpl) {
+
+	},
     'click [name=timeHeading]': function(e,tmpl) {
       if (Session.get('showTime')) {
         Session.set('showTime', false);
@@ -171,9 +161,6 @@ function setupDate() {
   });
 
   Template.watch.helpers({
-    showVideo: function () {
-      return Session.get("showVideo");
-    },
     showLearnMore: function () {
       return Session.get("showLearnMore");
     },
@@ -185,9 +172,8 @@ function setupDate() {
 });
 
 Template.watch.created = function () {
-//Session.set("showVideo", "false");  
 };
 Template.watch.rendered = function () {
-	//$('.centerContents').hide();
+	$('.centerContents').hide();
 	$('#signupForm').parsley();
 };

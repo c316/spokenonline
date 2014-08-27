@@ -48,10 +48,10 @@ border-radius: 6px;
 }
 .smallTopPadding {
     bottom: 40px;
-	padding-top: 5px;
+	padding-top: 15px;
 }
 .moveButtonDown {
-    padding-top: 65px;
+    padding-top: 120px;
 }
 .marginBottom {
 	margin-bottom: 10px;
@@ -119,7 +119,7 @@ ul li a i:hover {
     padding-top: 0;
 }
 .topMargin {
-    margin-top: 20px;
+    margin-top: 40px;
 }
 .noBottomPadding {
     padding-bottom: 0;
@@ -174,3 +174,19 @@ input.parsley-error,select.parsley-error,textarea.parsley-error {
 }
 
 /* End Parsley CSS*/
+
+.modal-content {
+    padding-left: 10px;
+}
+.darkBlueButton:hover {
+    background-color: #415b76;
+    border-color: black;
+    color: white;
+    box-shadow: inset 0 0 0 4px white, 0 0 1px rgba(0, 0, 0, 0);
+}
+.registerButton:hover {
+    background-color: #b32d00;
+    border-color: black;
+    color: white;
+    box-shadow: inset 0 0 0 4px white, 0 0 1px rgba(0, 0, 0, 0);
+}
