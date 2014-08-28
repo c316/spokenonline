@@ -30,7 +30,19 @@ Router.map(function () {
 		}
 	});
 	this.route('base', {path: '/spoken/live/:_id',
-		waitOn: function() { return Meteor.subscribe('email_list', this.params._id)},
+		waitOn: function() {
+			Meteor.call('doesExist', this.params._id, function(error, result){
+				if (result){
+					console.log(result);
+					return Meteor.subscribe('email_list', this.params._id);
+				}
+				else {
+					console.log(result);
+					Router.go('/spoken/watch');
+				}
+			});
+
+		},
 		data: function () {
 			Session.set('page', 'live');
 			return Email_List.findOne(this.params._id);

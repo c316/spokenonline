@@ -13,11 +13,11 @@ Template.landing.events({
     },
 	'click [name=viewPage]': function() {
 		console.log("viewPage Clicked");
-		Router.go('watch');
+		Router.go('/spoken/watch');
 	},
 	'click [name=attendPage]': function() {
 		console.log("attendPage Clicked");
-		Router.go('attend');
+		Router.go('/spoken/attend');
 	}
 });
 
