@@ -1,0 +1,11 @@
+standard-app-packages
+jquery
+jquery-ui
+bootstrap-3
+iron-router
+iron-router-progress
+moment
+mandrill
+font-awesome
+http
+parsley.js
