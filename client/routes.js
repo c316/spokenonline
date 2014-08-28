@@ -12,25 +12,28 @@ Router.configure({
 Router.map(function () {
   this.route('landing', {path: '/spoken',
   });
-  this.route('watch', {path: '/spoken/watch',
+	this.route('welcome', {path: '/spoken/welcome',
+		data: function () {
+			return $("#DateCountdown").TimeCircles();
+		}
+	});
+	this.route('base', {path: '/spoken/watch',
     data: function () {
+		Session.set('page', 'watch');
           return $("#DateCountdown").TimeCircles();
       }
-  });
-  this.route('attend', {path: '/spoken/attend',
-    data: function () {
-          return $("#DateCountdown").TimeCircles();
-      }
-  });
-  this.route('welcome', {path: '/spoken/welcome',
-    data: function () {
-          return $("#DateCountdown").TimeCircles();
-      }
-  });
-  this.route('live', {path: '/spoken/live/:_id',
-    waitOn: function() { return Meteor.subscribe('email_list', this.params._id)},
-    data: function () {
-      return Email_List.findOne(this.params._id);
-    }
-  });
+    });
+	this.route('base', {path: '/spoken/attend',
+		data: function () {
+			Session.set('page', 'attend');
+			return $("#DateCountdown").TimeCircles();
+		}
+	});
+	this.route('base', {path: '/spoken/live/:_id',
+		waitOn: function() { return Meteor.subscribe('email_list', this.params._id)},
+		data: function () {
+			Session.set('page', 'live');
+			return Email_List.findOne(this.params._id);
+		}
+	});
 });

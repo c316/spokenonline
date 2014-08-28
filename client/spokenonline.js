@@ -47,7 +47,7 @@ function setupDate() {
     $('#DateCountdown').hide();
   }
 }
-  Template.watch.events({
+  Template.base.events({
 
     'submit form': function (e, tmpl) {
 	    //prevent the default form action on this form
@@ -169,28 +169,31 @@ function setupDate() {
       } else {
           Session.set('showTime', true);
           setTimeout(function () {
-        setupDate(); //call the same function twice, 
+        setupDate(); //call the same function twice,
         setupDate(); //ugly hack to fix the box not appearing when switching between check and card
       }, 20);
       }
     }
   });
 
-  Template.watch.helpers({
-    showLearnMore: function () {
-      return Session.get("showLearnMore");
-    },
+  Template.base.helpers({
     showTime: function () {
       return Session.get("showTime");
     },
+	showWatch: function () {
+		return Session.equals('page', 'watch');
+	},
+	showLive: function () {
+	  return Session.equals('page', 'live');
+	},
     insertContent: function () {
     }
 });
 
-Template.watch.created = function () {
+Template.base.created = function () {
 };
-Template.watch.rendered = function () {
+Template.base.rendered = function () {
 	$('.centerContents').hide();
 	$('#signupForm').parsley();
-
+	//Session.set('page', 'watch');
 };
