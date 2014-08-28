@@ -1,1 +1,1 @@
-Meteor.absoluteUrl('spokenonline');
+Meteor.absoluteUrl('spoken');
