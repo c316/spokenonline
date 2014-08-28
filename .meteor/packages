@@ -5,12 +5,15 @@
 
 standard-app-packages
 jquery
-jquery-ui
-bootstrap-3
-iron-router
-iron-router-progress
+mrt:jquery-ui@1.9.2
+mrt:iron-router-progress@0.4.1
 moment
-mandrill
-font-awesome
+timmyg13:mandrill@0.0.6
+natestrauser:font-awesome@4.1.0
 http
 parsley.js
+mrt:moment
+mrt:parsley.js
+iron:router
+mizzao:bootstrap-3
+
