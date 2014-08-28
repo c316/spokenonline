@@ -10,24 +10,24 @@ Router.configure({
 });
 
 Router.map(function () {
-  this.route('landing', {path: '/spokenonline',
+  this.route('landing', {path: '/spoken',
   });
-  this.route('watch', {path: '/spokenonline/watch',
+  this.route('watch', {path: '/spoken/watch',
     data: function () {
           return $("#DateCountdown").TimeCircles();
       }
   });
-  this.route('attend', {path: '/spokenonline/attend',
+  this.route('attend', {path: '/spoken/attend',
     data: function () {
           return $("#DateCountdown").TimeCircles();
       }
   });
-  this.route('welcome', {path: '/spokenonline/welcome',
+  this.route('welcome', {path: '/spoken/welcome',
     data: function () {
           return $("#DateCountdown").TimeCircles();
       }
   });
-  this.route('live', {path: '/spokenonline/live/:_id', 
+  this.route('live', {path: '/spoken/live/:_id',
     waitOn: function() { return Meteor.subscribe('email_list', this.params._id)},
     data: function () {
       return Email_List.findOne(this.params._id);
