@@ -103,6 +103,7 @@ function setupDate() {
 		$('#email').appendTo("#moveTo").animate(800);
 		$('#email').prop('disabled', true);
 		$('#email').attr("placeholder", 'We got it.');
+	    $('#email').removeClass('smaller-width');
 	    $('.moveButtonDown').css("paddingTop", "101px");
 	    $('html, body').animate({
 		    scrollTop: $("#topCol").offset().top
@@ -144,8 +145,23 @@ function setupDate() {
 		}, 2000);
     },
 	'click [name=learnMore]': function(e,tmpl) {
-
+		if ($.remodal) {
+			$('.modal').remodal({
+				hashTracking: false
+			});
+			var modalSuccess = $.remodal.lookup[$('[data-remodal-id=modal_live_stream]').data('remodal')];
+			modalSuccess.open();
+		}
 	},
+	'click [name=q_a]': function(e,tmpl) {
+		  if ($.remodal) {
+			  $('.modal').remodal({
+				  hashTracking: false
+			  });
+			  var modalSuccess = $.remodal.lookup[$('[data-remodal-id=modal_live_stream_q_a]').data('remodal')];
+			  modalSuccess.open();
+		  }
+	  },
     'click [name=timeHeading]': function(e,tmpl) {
       if (Session.get('showTime')) {
         Session.set('showTime', false);
@@ -176,4 +192,5 @@ Template.watch.created = function () {
 Template.watch.rendered = function () {
 	$('.centerContents').hide();
 	$('#signupForm').parsley();
+
 };

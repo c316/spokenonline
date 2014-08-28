@@ -13,7 +13,7 @@ Meteor.methods({
 		console.log("I made it to the top....of mailchimpSubscribe");
 		HTTP.call("POST", "https://us3-api-mailchimp-com-iswbdbcku2lx.runscope.net/2.0/lists/subscribe.format",
 			{data:{
-				"apikey": "ceac30b2fe251f9417384ddd5bbd7012-us3",
+				"apikey": Meteor.settings.mailchimpkey,
 				"id": "94e2b8146f",
 				"email": {
 					"email": form.email
