@@ -29,6 +29,7 @@ Router.map(function () {
 			return $("#DateCountdown").TimeCircles();
 		}
 	});
+	// TODO: Need to add a way to know if a user is logged in right now. Then if they are mark that in the database and use this area to show them that the ID is already in use
 	this.route('base', {path: '/spoken/live/:_id',
 		waitOn: function() {
 			Meteor.call('doesExist', this.params._id, function(error, result){
