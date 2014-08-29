@@ -1,6 +1,7 @@
 /**
  * Created by Josh on 8/25/2014.
  */
+var Fiber = Meteor.npmRequire('fibers');
 
 Meteor.methods({
 	subscribe: function (form) {
@@ -42,8 +43,13 @@ Meteor.methods({
 			});
 	},
 	doesExist: function(id) {
-		var fetchedID = Email_List.findOne({_id: id});
-		console.log(fetchedID);
-		return fetchedID;
+		var storeID = id;
+			if (Email_List.findOne(storeID) != undefined) {
+				console.log("true");
+				return storeID;
+			} else {
+				console.log("false");
+				return false;
+			}
 	}
 });
