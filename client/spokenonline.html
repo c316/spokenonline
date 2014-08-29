@@ -6,7 +6,7 @@
 				{{#if showTime}}
 					{{> time}}
 				{{else}}
-					<div name="timeHeading" class="cursorPointer whiteText topMargin">
+					<div name="timeHeading" class="cursorPointer whiteText topMargin equalBottomMargin">
 						<p class="lead">Live On October 12th 5:00pm CST</p>
 					</div>
 				{{/if}}
@@ -71,12 +71,12 @@
         <div class="modal" data-remodal-id="modal_live_stream">
             <h1>Spoken Live Stream</h1>
 
-            <p><strong>For the first time in TMP history we will be live streaming the event around the world.
+            <p>For the first time in TMP history we will be live streaming the event around the world.
                 This is a great opportunity for everyone to be a part of the night and Spoken 2014 promises to
                 be an evening you will not want to miss! Throughout the event, you will experience the heart
                 and vision of Trash Mountain Project with all-new videos, live music, testimonials, and
                 international speakers. We greatly value your time and promise the event will last no longer
-                than 90 minutes.</strong></p>
+                than 90 minutes.</p>
         </div>
         <!-- modal for Q&A -->
         <div class="modal" data-remodal-id="modal_live_stream_q_a">
@@ -100,7 +100,7 @@
 </template>
 
 <template name="stream">
-	<div class="jumbotron clearBackground">
+	<div class="jumbotron clearBackground removePadding">
         <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow:
         hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object,
         .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
@@ -110,7 +110,7 @@
 </template>
 
 <template name="video">
-    <div class="jumbotron clearBackground">
+    <div class="jumbotron clearBackground removePadding">
         <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; }
         .embed-container iframe, .embed-container object, .embed-container embed
         { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }

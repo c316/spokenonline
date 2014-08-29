@@ -8,7 +8,7 @@ Template.prompt.events({
 		alert("Got to submit form area");
 		var form = {
 			number: $('#numberWithYou').val(),
-			email: $('#email').val()
+			email: $('#emailAddress').val()
 		};
 
 		console.log(form.number + " " + form.email);
