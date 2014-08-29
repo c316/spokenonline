@@ -40,5 +40,10 @@ Meteor.methods({
 					console.log(error);
 				}
 			});
+	},
+	doesExist: function(id) {
+		var fetchedID = Email_List.findOne({_id: id});
+		console.log(fetchedID);
+		return fetchedID;
 	}
 });
