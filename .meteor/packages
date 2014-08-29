@@ -6,9 +6,9 @@
 standard-app-packages
 jquery
 mrt:jquery-ui@1.9.2
-mrt:iron-router-progress@0.4.1
+mrt:iron-router-progress@0.9.2
 timmyg13:mandrill@0.0.6
-natestrauser:font-awesome@4.1.0
+natestrauser:font-awesome@4.2.0
 http
 mrt:moment
 amr:parsley.js
