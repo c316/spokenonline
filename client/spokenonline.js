@@ -102,7 +102,7 @@ function setupDate() {
 		$('#zip').hide(1400);
 		$('#email').appendTo("#moveTo").animate(800);
 		$('#email').prop('disabled', true);
-		$('#email').attr("placeholder", 'We got it.');
+		$('#email').attr("placeholder", "You're In! Check Your Email For Details.");
 	    $('#email').removeClass('smaller-width');
 	    $('.moveButtonDown').css("paddingTop", "101px");
 	    $('html, body').animate({
@@ -142,7 +142,7 @@ function setupDate() {
       });
 		$('html, body').animate({
 			scrollTop: $("#email").offset().top
-		}, 2000);
+		}, 1500);
     },
 	'click [name=learnMore]': function(e,tmpl) {
 		if ($.remodal) {
