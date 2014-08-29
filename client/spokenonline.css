@@ -201,3 +201,7 @@ input.parsley-error,select.parsley-error,textarea.parsley-error {
 .equalBottomMargin {
     margin-bottom: 45px;
 }
+.remodal{
+    opacity: .9;
+    color: #2b2828;
+}
