@@ -21,6 +21,10 @@
                     {{> stream}}
                 {{else}}
                 {{/if}}
+                {{#if showPrompt}}
+                    {{> prompt}}
+                {{else}}
+                {{/if}}
 			</div>
 			<div class="col-lg-8 col-lg-offset-2">
 				<form class="form-horizontal col-md-12 signupForm noBottomMargin" id="signupForm">
@@ -63,17 +67,17 @@
 			</div>
 		</div>
 
-            <!-- modal for Learn More -->
-            <div class="modal" data-remodal-id="modal_live_stream">
-                <h1>Spoken Live Stream</h1>
+        <!-- modal for Learn More -->
+        <div class="modal" data-remodal-id="modal_live_stream">
+            <h1>Spoken Live Stream</h1>
 
-                <p><strong>For the first time in TMP history we will be live streaming the event around the world.
-                    This is a great opportunity for everyone to be a part of the night and Spoken 2014 promises to
-                    be an evening you will not want to miss! Throughout the event, you will experience the heart
-                    and vision of Trash Mountain Project with all-new videos, live music, testimonials, and
-                    international speakers. We greatly value your time and promise the event will last no longer
-                    than 90 minutes.</strong></p>
-            </div>
+            <p><strong>For the first time in TMP history we will be live streaming the event around the world.
+                This is a great opportunity for everyone to be a part of the night and Spoken 2014 promises to
+                be an evening you will not want to miss! Throughout the event, you will experience the heart
+                and vision of Trash Mountain Project with all-new videos, live music, testimonials, and
+                international speakers. We greatly value your time and promise the event will last no longer
+                than 90 minutes.</strong></p>
+        </div>
         <!-- modal for Q&A -->
         <div class="modal" data-remodal-id="modal_live_stream_q_a">
             <div class="text-left">
@@ -89,6 +93,7 @@
                 <br/>A. Yes! This is the best part of choosing to watch online. :)</p>
             </div>
     	</div>
+
 
 		{{> footer}}
         </div>

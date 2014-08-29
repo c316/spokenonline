@@ -1,0 +1,16 @@
+<template name="prompt">
+    <!-- Modal for Live page # with you prompt -->
+    <div class="modal" data-remodal-id="entryRemodal"
+         data-remodal-options="hashTracking: false">
+        <h1>Almost there...</h1>
+        <p>Please enter your email address and the number of people who are watching with you.</p>
+        <div class="form-group">
+            <form id="entryForm">
+                <input type="email" class="form-control input-lg"  title="Email Address" placeholder="Email" autofocus="autofocus" required id="email">
+                <input type="number" min="1" data-parsley-type="number" class="form-control input-lg"  title="Enter the number of people watching with you." placeholder="Number of watchers" required id="numberWithYou">
+                <br/>
+                <button type="submit" class="btn btn-hg btn-primary btn-inverse blueButton">OK</button>
+            </form>
+        </div>
+    </div>
+</template>

@@ -183,8 +183,21 @@ function setupDate() {
 	showWatch: function () {
 		return Session.equals('page', 'watch');
 	},
+	//TODO: Show the live video stream if the page is 'live' and the id from the URL is not logged in.
 	showLive: function () {
-	  return Session.equals('page', 'live');
+		if (Session.equals('page', 'live') && (Email_List.find({_id: Session.get('params._id')}).fetch() != false)) {
+			console.log(true);
+			return true;
+		}else {
+			return false;
+	  }
+	},
+	showPrompt: function () {
+		if (Email_List.find({_id: Session.get('params._id')}).fetch() == false) {
+			return true;
+		} else{
+			return false;
+		}
 	},
     insertContent: function () {
     }
@@ -197,3 +210,7 @@ Template.base.rendered = function () {
 	$('#signupForm').parsley();
 	//Session.set('page', 'watch');
 };
+
+Template.stream.rendered = function() {
+
+}

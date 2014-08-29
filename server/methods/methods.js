@@ -1,7 +1,7 @@
 /**
  * Created by Josh on 8/25/2014.
  */
-var Fiber = Meteor.npmRequire('fibers');
+//var Fiber = Meteor.npmRequire('fibers');
 
 Meteor.methods({
 	subscribe: function (form) {
@@ -42,11 +42,10 @@ Meteor.methods({
 				}
 			});
 	},
-	doesExist: function(id) {
-		var storeID = id;
-			if (Email_List.findOne(storeID) != undefined) {
-				console.log("true");
-				return storeID;
+	 storeNumber: function(form) {
+			if (Email_List.findOne(form.email) != undefined) {
+				console.log(form.email + " " + form.number);
+				return (Email_List.findOne({email: form.email})._id);
 			} else {
 				console.log("false");
 				return false;

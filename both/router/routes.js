@@ -29,15 +29,19 @@ Router.map(function () {
 			return $("#DateCountdown").TimeCircles();
 		}
 	});
-	// TODO: Need to add a way to know if a user is logged in right now. Then if they are mark that in the database and use this area to show them that the ID is already in use
+	// TODO: Setup Modal so the page can redirect to the correct :_id page and then be subscribed.
+	this.route('prompt', {path: '/spoken/live',
+		data: function() {
+			Session.set('page', 'prompt');
+		}
+	});
 	this.route('base', {path: '/spoken/live/:_id',
 		waitOn: function() {
-			return Meteor.subscribe('email_list', this.params._id);
+			Meteor.subscribe('email_list', this.params._id);
 		},
 		data: function () {
-			Session.set('page', 'live');/*
-			var templateData =  Email_List.findOne({_id: this.params._id});
-			return templateData;*/
+			Session.set('page', 'live');
+			Session.set('params._id', this.params._id);
 		}
 	});
 });
