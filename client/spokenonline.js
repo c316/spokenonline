@@ -199,6 +199,9 @@ function setupDate() {
 			return false;
 		}
 	},
+	showCal: function () {
+		return Session.equals('cal', 'show');
+	},
     insertContent: function () {
     }
 });

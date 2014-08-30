@@ -2,7 +2,6 @@
 	<div class="container-full text-center">
 		<div class="col-lg-12 text-center" >
 			<div class="col-lg-6 col-lg-offset-3" id="topCol">
-
 				{{#if showTime}}
 					{{> time}}
 				{{else}}
@@ -10,6 +9,7 @@
 						<p class="lead">Live On October 12th 5:00pm CST</p>
 					</div>
 				{{/if}}
+
 			</div>
 
 			<div class="col-lg-8 col-lg-offset-2">
@@ -66,6 +66,24 @@
 				</form>
 			</div>
 		</div>
+        <!-- modal for Learn More -->
+        <div class="modal" data-remodal-id="modal_add_to_calendar">
+            <div class="text-center">
+                {{> calendar}}
+                <p>
+                    &nbsp;
+                </p>
+                <p>
+                    &nbsp;
+                </p>
+                <p>
+                    &nbsp;
+                    <br/>
+                    &nbsp;
+                </p>
+
+            </div>
+        </div>
 
         <!-- modal for Learn More -->
         <div class="modal" data-remodal-id="modal_live_stream">

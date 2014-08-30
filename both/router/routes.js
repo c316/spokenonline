@@ -20,9 +20,17 @@ Router.map(function () {
 	this.route('base', {path: '/spoken/watch',
     data: function () {
 		Session.set('page', 'watch');
+	    Session.set('cal', 'no');
           return $("#DateCountdown").TimeCircles();
       }
     });
+	this.route('base', {path: '/spoken/watch/calendar',
+		data: function () {
+			Session.set('page', 'watch');
+			Session.set('cal', 'show');
+			return $("#DateCountdown").TimeCircles();
+		}
+	});
 	this.route('base', {path: '/spoken/attend',
 		data: function () {
 			Session.set('page', 'attend');
@@ -42,6 +50,11 @@ Router.map(function () {
 		data: function () {
 			Session.set('page', 'live');
 			Session.set('params._id', this.params._id);
+		}
+	});
+	this.route('calendar', {path: '/spoken/calendar',
+		data: function() {
+			Session.set('page', 'calendar');
 		}
 	});
 });
