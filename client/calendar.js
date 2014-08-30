@@ -20,6 +20,7 @@ Template.calendar.rendered = function () {
 	// Redirects the browser back to the /watch page after closing the modal on the /calendar page
 	$(document).one('close', '[data-remodal-id=modal_add_to_calendar]', function () {
 		Router.go('/spoken/watch');
+		Session.equals('cal', 'no');
 	});
 
 	if ($.remodal && Session.equals('cal', 'show')) {

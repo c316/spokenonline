@@ -198,6 +198,13 @@ function setupDate() {
   });
 
   Template.base.helpers({
+	headerText: function () {
+		if (Session.equals('page', 'watch') || Session.equals('page', 'live')) {
+			return "Live On";
+		}else {
+			return "Join Us On";
+		}
+	},
 	showVideo: function () {
 		if(Session.equals('page', 'watch') || Session.equals('page', 'attend')) {
 			return true;
@@ -243,5 +250,5 @@ Template.base.rendered = function () {
 };
 
 Template.stream.rendered = function() {
-
+	$('#attendButton').remove();
 }

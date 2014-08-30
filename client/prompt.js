@@ -31,9 +31,10 @@ Template.prompt.rendered = function () {
 		});
 		var modalSuccess = $.remodal.lookup[$('[data-remodal-id=entryRemodal]').data('remodal')];
 		modalSuccess.open();
+
+		$('.remodal-overlay').unbind('click.remodal');
+		$(document).one().unbind('keyup.remodal');
+		$('.remodal-close').removeClass("remodal-close");
 	}
-	$('.remodal-overlay').unbind('click.remodal');
-	$(document).unbind('keyup.remodal');
-	$('.remodal-close').removeClass("remodal-close");
 	$('#entryForm').parsley();
 };
