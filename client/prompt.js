@@ -1,10 +1,9 @@
 /**
  * Created by Josh on 8/29/2014.
  */
-
 Template.prompt.events({
 	'submit form': function(e,tmpl) {
-		e.preventDefault();
+		//e.preventDefault();
 		alert("Got to submit form area");
 		var form = {
 			number: $('#numberWithYou').val(),
@@ -14,7 +13,7 @@ Template.prompt.events({
 		console.log(form.number + " " + form.email);
 		Meteor.call('storeNumber', form, function(error, result) {
 			console.log(result);
-			if(result != false){
+			if(result !== false){
 				console.log(result);
 				Router.go('/spoken/live/' + result);
 			} else {
@@ -22,10 +21,9 @@ Template.prompt.events({
 			}
 		});
 	}
-
 });
 Template.prompt.rendered = function () {
-	if ($.remodal && Session.equals('page', 'prompt')) {
+/*	if ($.remodal && Session.equals('page', 'prompt')) {
 		$('.modal').remodal({
 			hashTracking: false
 		});
@@ -35,6 +33,6 @@ Template.prompt.rendered = function () {
 		$('.remodal-overlay').unbind('click.remodal');
 		$(document).one().unbind('keyup.remodal');
 		$('.remodal-close').removeClass("remodal-close");
-	}
+	}*/
 	$('#entryForm').parsley();
 };

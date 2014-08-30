@@ -67,16 +67,6 @@ function setupDate() {
 		    "created_at": new Date().getTime()
 	    }
 
-	    Meteor.call("mailchimpSubscribe", form, function(error, result) {
-		    if (result) {
-			    //Log the results to the console
-			    console.log(result);
-		    } else {
-			    //Log the error to the console
-			    console.log(error);
-		    }
-	    });
-
 	    //Call the subscribe function to write this to the local database
 	    Meteor.call("subscribe", form, function(error, result) {
 		    if (result) {
@@ -228,7 +218,7 @@ function setupDate() {
 	  }
 	},
 	showPrompt: function () {
-		if (Email_List.find({_id: Session.get('params._id')}).fetch() == false) {
+		if (Session.equals('page', 'live') && Email_List.find({_id: Session.get('params._id')}).fetch() == false) {
 			return true;
 		} else{
 			return false;

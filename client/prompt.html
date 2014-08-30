@@ -1,7 +1,6 @@
 <template name="prompt">
     <!-- Modal for Live page # with you prompt -->
-    <div class="modal" data-remodal-id="entryRemodal"
-         data-remodal-options="hashTracking: false">
+<!--    <div class="modal" data-remodal-id="entryRemodal">
         <h1>Almost there...</h1>
         <p>Please enter your email address and the number of people who are watching with you.</p>
         <div class="form-group">
@@ -9,8 +8,32 @@
                 <input type="email" class="form-control input-lg"  title="Email Address" placeholder="Email" autofocus="autofocus" required id="emailAddress">
                 <input type="number" min="1" data-parsley-type="number" class="form-control input-lg"  title="Enter the number of people watching with you." placeholder="Number of watchers" required id="numberWithYou">
                 <br/>
-                <button type="submit" class="btn btn-hg btn-primary btn-inverse blueButton">OK</button>
+                <button type="submit" class="btn btn-hg btn-primary btn-inverse blueButton remodal-confirm">Submit</button>
             </form>
+        </div>
+    </div>-->
+    <div class="container">
+        <div class="row vertical-offset-100">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title text-center">Complete the form to access the live stream.</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form accept-charset="UTF-8" role="form">
+                            <fieldset>
+                                <div class="form-group">
+                                    <input type="email" class="form-control input-lg"  title="Email Address" placeholder="Email" autofocus="autofocus" required id="emailAddress">
+                                </div>
+                                <div class="form-group">
+                                    <input type="number" min="1" data-parsley-type="number" class="form-control input-lg"  title="Enter the number of people watching with you." placeholder="Number of watchers" required id="numberWithYou">
+                                </div>
+                                <input class="btn btn-lg btn-success btn-block blueButton" type="submit" value="Let me in!">
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
