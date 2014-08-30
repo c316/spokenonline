@@ -53,6 +53,12 @@ border-radius: 6px;
 .moveButtonDown {
     padding-top: 122px;
 }
+.moveButtonDownSmall {
+    margin-top: 10px;
+}
+.moveButtonUp {
+    bottom: 49px;
+}
 .marginBottom {
 	margin-bottom: 10px;
 }
@@ -203,4 +209,7 @@ input.parsley-error,select.parsley-error,textarea.parsley-error {
 }
 .remodal{
     color: #2b2828;
+}
+.iframe-class { overflow-x:hidden; overflow-y:auto; }
+.moveAfterSubmit {
 }

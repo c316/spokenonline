@@ -102,9 +102,9 @@ function setupDate() {
 		$('#zip').hide(1400);
 		$('#email').appendTo("#moveTo").animate(800);
 		$('#email').prop('disabled', true);
-		$('#email').attr("placeholder", "You're In! Check Your Email For Details.");
+		$('#email').attr("placeholder", "You're In! Check Your Email.");
 	    $('#email').removeClass('smaller-width');
-	    $('.moveButtonDown').css("paddingTop", "101px");
+	    $('.moveAfterSubmit').css("paddingTop", "4px");
 	    $('html, body').animate({
 		    scrollTop: $("#topCol").offset().top
 	    }, 2000);
@@ -145,11 +145,20 @@ function setupDate() {
 		}, 1500);
     },
 	'click [name=learnMore]': function(e,tmpl) {
+		  if ($.remodal) {
+			  $('.modal').remodal({
+				  hashTracking: false
+			  });
+			  var modalSuccess = $.remodal.lookup[$('[data-remodal-id=modal_live_stream]').data('remodal')];
+			  modalSuccess.open();
+		  }
+	},
+	'click [name=learnMore_attend]': function(e,tmpl) {
 		if ($.remodal) {
 			$('.modal').remodal({
 				hashTracking: false
 			});
-			var modalSuccess = $.remodal.lookup[$('[data-remodal-id=modal_live_stream]').data('remodal')];
+			var modalSuccess = $.remodal.lookup[$('[data-remodal-id=modal_learn_more_attend]').data('remodal')];
 			modalSuccess.open();
 		}
 	},
@@ -159,6 +168,15 @@ function setupDate() {
 				  hashTracking: false
 			  });
 			  var modalSuccess = $.remodal.lookup[$('[data-remodal-id=modal_live_stream_q_a]').data('remodal')];
+			  modalSuccess.open();
+		  }
+	  },
+	  'click [name=q_a_attend]': function(e,tmpl) {
+		  if ($.remodal) {
+			  $('.modal').remodal({
+				  hashTracking: false
+			  });
+			  var modalSuccess = $.remodal.lookup[$('[data-remodal-id=modal_q_a_attend]').data('remodal')];
 			  modalSuccess.open();
 		  }
 	  },
@@ -173,10 +191,20 @@ function setupDate() {
         setupDate(); //ugly hack to fix the box not appearing when switching between check and card
       }, 20);
       }
-    }
+    },
+	'click #attendButton': function () {
+		Router.go('/spoken/attend/register');
+	}
   });
 
   Template.base.helpers({
+	showVideo: function () {
+		if(Session.equals('page', 'watch') || Session.equals('page', 'attend')) {
+			return true;
+		} else {
+			return false;
+		}
+	},
     showTime: function () {
       return Session.get("showTime");
     },

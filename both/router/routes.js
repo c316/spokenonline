@@ -37,6 +37,11 @@ Router.map(function () {
 			return $("#DateCountdown").TimeCircles();
 		}
 	});
+	this.route('attend', {path: '/spoken/attend/register',
+		data: function () {
+			Session.set('page', 'register');
+		}
+	});
 	// TODO: Setup Modal so the page can redirect to the correct :_id page and then be subscribed.
 	this.route('prompt', {path: '/spoken/live',
 		data: function() {

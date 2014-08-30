@@ -17,7 +17,8 @@ Template.calendar.rendered = function () {
 		callback  : ""
 	});
 
-	$(document).on('close', '.remodal', function () {
+	// Redirects the browser back to the /watch page after closing the modal on the /calendar page
+	$(document).one('close', '[data-remodal-id=modal_add_to_calendar]', function () {
 		Router.go('/spoken/watch');
 	});
 
@@ -27,6 +28,8 @@ Template.calendar.rendered = function () {
 		});
 		var modalSuccess = $.remodal.lookup[$('[data-remodal-id=modal_add_to_calendar]').data('remodal')];
 		modalSuccess.open();
-		$('.remodal').css('width', '300px');
+
+		//Changed the width for the calendar modal only.
+		$('[data-remodal-id=modal_add_to_calendar]').css('width', '300px').one();
 	}
 };
