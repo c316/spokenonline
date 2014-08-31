@@ -48,7 +48,7 @@ Meteor.methods({
 		return form._id;
 	},
 	 storeNumber: function(form) {
-			if (Email_List.findOne(form.email) != undefined) {
+			if (Email_List.findOne({email: form.email}) !== undefined) {
 				console.log(form.email + " " + form.number);
 				return (Email_List.findOne({email: form.email})._id);
 			} else {

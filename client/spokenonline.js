@@ -84,20 +84,20 @@ function setupDate() {
 
 		//Reset the form
 		$('#signupForm')[0].reset();
-		$('#fname').hide(400);
-		$('#lname').hide(600);
-		$('#address').hide(800);
-		$('#city').hide(1000);
-		$('#state').hide(1200);
-		$('#zip').hide(1400);
-		$('#email').appendTo("#moveTo").animate(800);
+		$('#fname').hide(100);
+		$('#lname').hide(150);
+		$('#address').hide(200);
+		$('#city').hide(250);
+		$('#state').hide(300);
+		$('#zip').hide(350);
+		$('#email').appendTo("#moveTo").animate(400);
 		$('#email').prop('disabled', true);
 		$('#email').attr("placeholder", "You're In! Check Your Email.");
 	    $('#email').removeClass('smaller-width');
 	    $('.moveAfterSubmit').css("paddingTop", "4px");
 	    $('html, body').animate({
 		    scrollTop: $("#topCol").offset().top
-	    }, 2000);
+	    }, 600);
     },
     //keypress input detection for autofilling form with test data
     'keypress input': function(e) {
@@ -107,22 +107,22 @@ function setupDate() {
     },
     //Show the other form fields, animate them too
 	'keyup #email': function(e,templ) {
-	$('#fname').show(400, function () {
+	$('#fname').show(150, function () {
 	  $('#fname').css("marginTop", "5px")
 	});
-	$('#lname').show(500, function () {
+	$('#lname').show(200, function () {
 	  $('#lname').css("marginTop", "5px")
 	});
-	$('#address').show(600, function () {
+	$('#address').show(250, function () {
 	    $('#address').css("marginTop", "5px")
 	});
-	$('#city').show(700, function () {
+	$('#city').show(300, function () {
 		$('#city').css("marginTop", "5px")
 	});
-	$('#state').show(800, function () {
+	$('#state').show(350, function () {
 		$('#state').css("marginTop", "5px")
 	});
-	$('#zip').show(900, function () {
+	$('#zip').show(400, function () {
 		$('#zip').css("marginTop", "5px")
 	});
       //Move the registerNow button to the bottom so users know what this is
@@ -132,7 +132,7 @@ function setupDate() {
       });
 		$('html, body').animate({
 			scrollTop: $("#email").offset().top
-		}, 1500);
+		}, 600);
     },
 	'click [name=learnMore]': function(e,tmpl) {
 		  if ($.remodal) {
@@ -208,6 +208,13 @@ function setupDate() {
 	showWatch: function () {
 		return Session.equals('page', 'watch');
 	},
+	showWatchButtons: function () {
+	  if (Session.equals('page', 'watch') || Session.equals('page', 'live')) {
+		  return true;
+	  } else {
+		  return false;
+	  }
+	},
 	//TODO: Show the live video stream if the page is 'live' and the id from the URL is not logged in.
 	showLive: function () {
 		if (Session.equals('page', 'live') && (Email_List.find({_id: Session.get('params._id')}).fetch() != false)) {
@@ -240,5 +247,6 @@ Template.base.rendered = function () {
 };
 
 Template.stream.rendered = function() {
-	$('#attendButton').remove();
+	$('.moveAfterSubmit').remove();
+	$('.noBottomPadding').css('marginTop', '60px');
 }
