@@ -74,12 +74,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="spokenonline.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="spokenonline.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/spokenonline.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.19970632" vertical-offset="510" max-vertical-offset="3536">
+            <state vertical-scroll-proportion="-2.6666667" vertical-offset="510" max-vertical-offset="3536">
               <caret line="38" column="55" selection-start-line="38" selection-start-column="55" selection-end-line="38" selection-end-column="55" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/admin.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="289">
+              <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="7" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/compatibility/js/admin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.068456374" vertical-offset="0" max-vertical-offset="745">
+              <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#40#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -97,18 +119,8 @@
       <file leaf-file-name="spokenonline.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/spokenonline.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.2" vertical-offset="2850" max-vertical-offset="4488">
-              <caret line="190" column="30" selection-start-line="190" selection-start-column="30" selection-end-line="190" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery.remodal.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/compatibility/css/jquery.remodal.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4165">
-              <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+            <state vertical-scroll-proportion="-9.76" vertical-offset="3054" max-vertical-offset="4488">
+              <caret line="194" column="0" selection-start-line="194" selection-start-column="0" selection-end-line="194" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -222,6 +234,8 @@
         <option value="$PROJECT_DIR$/client/spokenonline.js" />
         <option value="$PROJECT_DIR$/client/spokenonline.css" />
         <option value="$PROJECT_DIR$/client/spokenonline.html" />
+        <option value="$PROJECT_DIR$/client/admin.html" />
+        <option value="$PROJECT_DIR$/client/compatibility/js/admin.js" />
       </list>
     </option>
   </component>
@@ -546,22 +560,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/spokenonline.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="436" max-vertical-offset="2431">
-          <caret line="39" column="165" selection-start-line="39" selection-start-column="165" selection-end-line="39" selection-end-column="165" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/spokenonline.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3029" max-vertical-offset="3774">
-          <caret line="195" column="81" selection-start-line="195" selection-start-column="81" selection-end-line="195" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/prompt.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="357">
@@ -906,14 +904,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/spokenonline.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.2" vertical-offset="2850" max-vertical-offset="4488">
-          <caret line="190" column="30" selection-start-line="190" selection-start-column="30" selection-end-line="190" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/spokenonline.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-24.04" vertical-offset="3122" max-vertical-offset="3842">
@@ -924,9 +914,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/spokenonline.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19970632" vertical-offset="510" max-vertical-offset="3536">
+        <state vertical-scroll-proportion="-2.6666667" vertical-offset="510" max-vertical-offset="3536">
           <caret line="38" column="55" selection-start-line="38" selection-start-column="55" selection-end-line="38" selection-end-column="55" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="289">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="7" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/spokenonline.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.76" vertical-offset="3054" max-vertical-offset="4488">
+          <caret line="194" column="0" selection-start-line="194" selection-start-column="0" selection-end-line="194" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/compatibility/js/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.068456374" vertical-offset="0" max-vertical-offset="745">
+          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
