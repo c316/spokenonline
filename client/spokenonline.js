@@ -69,16 +69,17 @@ function setupDate() {
 
 	    //Call the subscribe function to write this to the local database
 	    Meteor.call("subscribe", form, function(error, result) {
-		    if (result) {
-			    //Insert ID into the modal
-			    $('#modalContent').text("You rock! Check your email for more info from us. Please share with your friends.");
+		    if (result && result !== 'duplicate') {
 			    $('.centerContents').show();
 
 			    //Log the ID to the console
 			    console.log(result);
 		    } else {
-			    //Log the ID to the console
-			    console.log(error);
+			    $('.form-group').hide();
+			    location.reload();
+			    alert("Seems there was a problem with the email you entered. Please try again. If you continue to see this" +
+				    " message then the email address you are using has probably already been used.");
+
 		    }
 	    });
 
@@ -184,6 +185,10 @@ function setupDate() {
     },
 	'click #attendButton': function () {
 		Router.go('/spoken/attend/register');
+	},
+	'click [name=give]': function() {
+		window.open('https://trashmountain.com/give');
+		$('[name=give]').css('')
 	}
   });
 
@@ -217,15 +222,14 @@ function setupDate() {
 	},
 	//TODO: Show the live video stream if the page is 'live' and the id from the URL is not logged in.
 	showLive: function () {
-		if (Session.equals('page', 'live') && (Email_List.find({_id: Session.get('params._id')}).fetch() != false)) {
-			console.log(true);
+		if (Session.equals('page', 'live') && (Email_List.findOne({_id: Session.get('params._id')}) !== undefined)) {
 			return true;
 		}else {
 			return false;
 	  }
 	},
 	showPrompt: function () {
-		if (Session.equals('page', 'live') && Email_List.find({_id: Session.get('params._id')}).fetch() == false) {
+		if (Session.equals('page', 'live') && Email_List.find({_id: Session.get('params._id')}).fetch() === false) {
 			return true;
 		} else{
 			return false;
@@ -247,6 +251,9 @@ Template.base.rendered = function () {
 };
 
 Template.stream.rendered = function() {
-	$('.moveAfterSubmit').remove();
-	$('.noBottomPadding').css('marginTop', '60px');
+	$('#email').remove();
+	$('#registerNow').remove();
+	$('[name=give]').show();
+	$('#livePageEdits').addClass('equalBottomMarginLive');
+	$('[name=give]').show();$('.noBottomPadding').css('marginTop', '60px');
 }

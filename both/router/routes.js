@@ -55,6 +55,7 @@ Router.map(function () {
 		data: function () {
 			Session.set('page', 'live');
 			Session.set('params._id', this.params._id);
+			return Email_List.findOne(this.params._id);
 		}
 	});
 	this.route('calendar', {path: '/spoken/calendar',

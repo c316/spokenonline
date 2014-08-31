@@ -3,21 +3,22 @@
  */
 Template.prompt.events({
 	'submit form': function(e,tmpl) {
-		//e.preventDefault();
-		alert("Got to submit form area");
+		e.preventDefault();
 		var form = {
-			number: $('#numberWithYou').val(),
+			number: +($('#numberWithYou').val()),
 			email: $('#emailAddress').val()
 		};
 
 		console.log(form.number + " " + form.email);
 		Meteor.call('storeNumber', form, function(error, result) {
-			console.log(result);
+
 			if(result !== false){
-				console.log(result);
 				Router.go('/spoken/live/' + result);
+				console.log(result);
 			} else {
-				alert("That didn't work");
+				alert("That didn't work, please try again. If you still can't get through you'll need to register." +
+					" To register, click the register link below the button on this page.");
+				$('#registerLink').show();
 			}
 		});
 	}

@@ -42,14 +42,20 @@ function mailchimpSubscribe (form) {
 Meteor.methods({
 	subscribe: function (form) {
 		//insert the form data into the mongo collection
-		form._id = Email_List.insert(form);
-		console.log(form);
-		mailchimpSubscribe(form);
-		return form._id;
+		if (!Email_List.findOne({email: form.email})) {
+			form._id = Email_List.insert(form);
+			console.log(form);
+			mailchimpSubscribe(form);
+			return form._id;
+		}else {
+			return 'duplicate';
+		}
 	},
 	 storeNumber: function(form) {
 			if (Email_List.findOne({email: form.email}) !== undefined) {
+				var id = Email_List.findOne({email: form.email})._id;
 				console.log(form.email + " " + form.number);
+				Email_List.update(id, {$inc: {number: form.number}});
 				return (Email_List.findOne({email: form.email})._id);
 			} else {
 				console.log("false");

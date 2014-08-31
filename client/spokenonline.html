@@ -34,9 +34,10 @@
                             <div class="btn-group moveButtonUp">
                                 <button type="button" class="btn btn-lg whiteButton" name="learnMore"><h6>Learn More</h6></button>
                             </div>
-                            <div class="btn-group moveAfterSubmit">
-                                <button type="submit" class="btn btn-lg btn-inverse marginBottom registerButton" name="registerNow"><h6>Register</h6></button>
-                                <div class="form-group">
+                            <div class="btn-group moveAfterSubmit" id="livePageEdits">
+                                <button type="submit" class="btn btn-lg btn-inverse marginBottom registerButton" name="registerNow" id="registerNow"><h6>Register</h6></button>
+                                <a><button type="button" class="btn btn-lg btn-inverse marginBottom registerButton" name="give"><h6>Give</h6></button></a>
+                                <div class="form-group" id="signupFormFields">
                                     <input type="email" class="form-control input-lg smaller-width"  title="Enter you email." placeholder="Enter your email address" required id="email">
                                     <input type="text" class="form-control input-lg smaller-width" id="fname" title="Enter you first name." placeholder="First Name" style="display:none;" required>
                                     <input type="text" class="form-control input-lg smaller-width" id="lname" title="Enter you last name." placeholder="Last Name" style="display:none;" required>
@@ -50,7 +51,6 @@
                                 <div class="centerContents">
                                     <ul id="socialSharing" class="paddingIcons">
                                         <li><a href="https://www.facebook.com/sharer/sharer.php" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                        <!--<li><a href="https://linkedin.com/"><i class="fa fa-linkedin"></i></a></li>-->
                                         <li><a href="https://twitter.com/share?url=https://trashmountain.com/spoken/watch" target="_blank"><i class="fa fa-twitter"></i></a></li>
                                         <li><a href="https://plus.google.com/share?url=https://trashmountain.com/spoken/watch" target="_blank"><i class="fa fa-google-plus"></i> </a></li>
                                     </ul>
@@ -70,18 +70,15 @@
                                 <div class="centerContents">
                                     <ul id="socialSharing" class="paddingIcons">
                                         <li><a href="https://www.facebook.com/sharer/sharer.php" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                        <!--<li><a href="https://linkedin.com/"><i class="fa fa-linkedin"></i></a></li>-->
                                         <li><a href="https://twitter.com/share?url=https://trashmountain.com/spoken/watch" target="_blank"><i class="fa fa-twitter"></i></a></li>
                                         <li><a href="https://plus.google.com/share?url=https://trashmountain.com/spoken/watch" target="_blank"><i class="fa fa-google-plus"></i> </a></li>
                                     </ul>
                                 </div>
-
                             </div>
                             <div class="btn-group">
                                 <button type="button" class="btn btn-lg whiteButton" name="q_a_attend"><h6>Q&A</h6></button>
                             </div>
                                 {{/if}}
-
 				  			</div>
 				  		</div>
 				</form>

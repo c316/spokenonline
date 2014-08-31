@@ -216,3 +216,6 @@ input.parsley-error,select.parsley-error,textarea.parsley-error {
 .vertical-offset-100{
     padding-top:100px;
 }
+.equalBottomMarginLive {
+    bottom: 23px;
+}
