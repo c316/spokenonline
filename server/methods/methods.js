@@ -1,7 +1,6 @@
 /**
  * Created by Josh on 8/25/2014.
  */
-//var Fiber = Meteor.npmRequire('fibers');
 
 function mailchimpSubscribe (form) {
 	console.log("I made it to the top....of mailchimpSubscribe");

@@ -1,5 +1,4 @@
 function fillForm() {
-	console.log("Filled form");
 	$('#email').val("support@trashmountain.com");
 	$('#fname').val("Test");
 	$('#lname').val("Person");
@@ -7,10 +6,6 @@ function fillForm() {
 	$('#city').val("City");
 	$('#state').val("State");
 	$('#zip').val("Zip");
-}
-
-function log() {
-  console.log(this);
 }
 
 function setupDate() {
@@ -71,9 +66,6 @@ function setupDate() {
 	    Meteor.call("subscribe", form, function(error, result) {
 		    if (result && result !== 'duplicate') {
 			    $('.centerContents').show();
-
-			    //Log the ID to the console
-			    console.log(result);
 		    } else {
 			    $('.form-group').hide();
 			    location.reload();
@@ -220,7 +212,6 @@ function setupDate() {
 		  return false;
 	  }
 	},
-	//TODO: Show the live video stream if the page is 'live' and the id from the URL is not logged in.
 	showLive: function () {
 		if (Session.equals('page', 'live') && (Email_List.findOne({_id: Session.get('params._id')}) !== undefined)) {
 			return true;
@@ -229,7 +220,7 @@ function setupDate() {
 	  }
 	},
 	showPrompt: function () {
-		if (Session.equals('page', 'live') && Email_List.find({_id: Session.get('params._id')}).fetch() === false) {
+		if (Session.equals('page', 'live') && (Email_List.findOne({_id: Session.get('params._id')}) === undefined)) {
 			return true;
 		} else{
 			return false;

@@ -36,7 +36,7 @@
                             </div>
                             <div class="btn-group moveAfterSubmit" id="livePageEdits">
                                 <button type="submit" class="btn btn-lg btn-inverse marginBottom registerButton" name="registerNow" id="registerNow"><h6>Register</h6></button>
-                                <a><button type="button" class="btn btn-lg btn-inverse marginBottom registerButton" name="give"><h6>Give</h6></button></a>
+                                <a><button type="button" class="btn btn-lg btn-inverse marginBottom registerButton" name="give" style="display: none;"><h6>Give</h6></button></a>
                                 <div class="form-group" id="signupFormFields">
                                     <input type="email" class="form-control input-lg smaller-width"  title="Enter you email." placeholder="Enter your email address" required id="email">
                                     <input type="text" class="form-control input-lg smaller-width" id="fname" title="Enter you first name." placeholder="First Name" style="display:none;" required>
@@ -84,7 +84,7 @@
 				</form>
 			</div>
 		</div>
-        <!-- modal for Learn More -->
+        <!-- modal for the calendar add -->
         <div class="modal" data-remodal-id="modal_add_to_calendar">
             <div class="text-center">
                 {{> calendar}}
@@ -103,7 +103,7 @@
             </div>
         </div>
 
-        <!-- modal for Learn More -->
+        <!-- modal for Learn More on the watch page-->
         <div class="modal" data-remodal-id="modal_live_stream">
             <div class="text-left">
                 <h1>Spoken Live Stream</h1>
@@ -116,7 +116,7 @@
                     than 90 minutes.</p>
             </div>
         </div>
-        <!-- modal for Q&A -->
+        <!-- modal for Q&A on the watch page-->
         <div class="modal" data-remodal-id="modal_live_stream_q_a">
             <div class="text-left">
                 <h1>Q&A</h1>
@@ -131,7 +131,7 @@
                 <br/>A. Yes! This is the best part of choosing to watch online. :)</p>
             </div>
     	</div>
-        <!-- modal for Learn More -->
+        <!-- modal for Learn More on the attend page -->
         <div class="modal" data-remodal-id="modal_learn_more_attend">
             <div class="text-left">
                 <h1>Learn More</h1>
@@ -145,7 +145,7 @@
                     and promise the event will last no longer than 90 minutes. </p>
             </div>
         </div>
-        <!-- modal for Q&A -->
+        <!-- modal for Q&A on the attend page-->
         <div class="modal" data-remodal-id="modal_q_a_attend">
             <div class="text-left">
                 <h1>Q&A</h1>
