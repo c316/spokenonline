@@ -1,0 +1,1 @@
+Control_Panel = new Meteor.Collection('control_panel');

@@ -217,5 +217,8 @@ input.parsley-error,select.parsley-error,textarea.parsley-error {
     padding-top:100px;
 }
 .equalBottomMarginLive {
-    bottom: 23px;
+    bottom: 2px;
+}
+ul li a i {
+    padding-top: 22%;
 }

@@ -42,20 +42,22 @@ Router.map(function () {
 			Session.set('page', 'register');
 		}
 	});
-	// TODO: Setup Modal so the page can redirect to the correct :_id page and then be subscribed.
 	this.route('prompt', {path: '/spoken/live',
 		data: function() {
 			Session.set('page', 'prompt');
 		}
 	});
-	this.route('base', {path: '/spoken/live/:_id',
+	this.route('live', {path: '/spoken/live/:_id',
 		waitOn: function() {
+			Meteor.subscribe('control_panel', 'eFWiTkSJtiYsau4Zc');
 			Meteor.subscribe('email_list', this.params._id);
 		},
 		data: function () {
+			Session.set('removeTime', false);
 			Session.set('page', 'live');
 			Session.set('params._id', this.params._id);
-			return Email_List.findOne(this.params._id);
+			Email_List.findOne(this.params._id);
+			return $("#DateCountdown").TimeCircles();
 		}
 	});
 	this.route('calendar', {path: '/spoken/calendar',

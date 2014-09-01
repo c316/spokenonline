@@ -21,4 +21,6 @@ Template.prompt.events({
 });
 Template.prompt.rendered = function () {
 	$('#entryForm').parsley();
+	$('#email').remove();
+	$('#registerNow').remove();
 };

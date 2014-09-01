@@ -187,9 +187,9 @@ function setupDate() {
   Template.base.helpers({
 	headerText: function () {
 		if (Session.equals('page', 'watch') || Session.equals('page', 'live')) {
-			return "Live On";
+			return "Live On October 12th 5:00pm CST";
 		}else {
-			return "Join Us On";
+			return "Join Us On October 12th 5:00pm CST";
 		}
 	},
 	showVideo: function () {
@@ -210,13 +210,6 @@ function setupDate() {
 		  return true;
 	  } else {
 		  return false;
-	  }
-	},
-	showLive: function () {
-		if (Session.equals('page', 'live') && (Email_List.findOne({_id: Session.get('params._id')}) !== undefined)) {
-			return true;
-		}else {
-			return false;
 	  }
 	},
 	showPrompt: function () {
@@ -246,5 +239,59 @@ Template.stream.rendered = function() {
 	$('#registerNow').remove();
 	$('[name=give]').show();
 	$('#livePageEdits').addClass('equalBottomMarginLive');
-	$('[name=give]').show();$('.noBottomPadding').css('marginTop', '60px');
+	$('[name=give]').show();
+	//$('.noBottomPadding').css('marginTop', '40px');
+
 }
+Template.live.helpers({
+	showLive: function () {
+		if (Session.equals('page', 'live') && (Email_List.findOne({_id: Session.get('params._id')}) !== undefined)) {
+			return true;
+		}else {
+			return false;
+		}
+	},
+	headerText: function () {
+		return "Live On October 12th 5:00pm CST";
+	},
+	removeTime: function () {
+		return Session.equals("removeTime");
+	},
+	showPrompt: function () {
+		if (Session.equals('page', 'live') && (Email_List.findOne({_id: Session.get('params._id')}) === undefined)) {
+			return true;
+		} else{
+			return false;
+		}
+	},
+	showSideContent: function () {
+		return Control_Panel.findOne(this._id).CheckPoint1;
+	}
+});
+Template.live.events({
+	'click [name=q_a]': function(e,tmpl) {
+		if ($.remodal) {
+			$('.modal').remodal({
+				hashTracking: false
+			});
+			var modalSuccess = $.remodal.lookup[$('[data-remodal-id=modal_live_stream_q_a]').data('remodal')];
+			modalSuccess.open();
+		}
+	},
+
+	'click [name=learnMore]': function(e,tmpl) {
+		if ($.remodal) {
+			$('.modal').remodal({
+				hashTracking: false
+			});
+			var modalSuccess = $.remodal.lookup[$('[data-remodal-id=modal_live_stream_q_a]').data('remodal')];
+			modalSuccess.open();
+		}
+	},
+	'click [name=give]': function() {
+		window.open('https://trashmountain.com/give');
+		$('[name=give]').css('')
+	}
+});
+Template.live.rendered = function () {
+};
