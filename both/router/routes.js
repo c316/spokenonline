@@ -49,7 +49,7 @@ Router.map(function () {
 	});
 	this.route('live', {path: '/spoken/live/:_id',
 		waitOn: function() {
-			Meteor.subscribe('control_panel', 'eFWiTkSJtiYsau4Zc');
+			Meteor.subscribe('control_panel', 'RwL6DMxwwmnH2sGTw');
 			Meteor.subscribe('email_list', this.params._id);
 		},
 		data: function () {
@@ -57,7 +57,8 @@ Router.map(function () {
 			Session.set('page', 'live');
 			Session.set('params._id', this.params._id);
 			Email_List.findOne(this.params._id);
-			return $("#DateCountdown").TimeCircles();
+			$("#DateCountdown").TimeCircles();
+			return Control_Panel.findOne('RwL6DMxwwmnH2sGTw');
 		}
 	});
 	this.route('calendar', {path: '/spoken/calendar',

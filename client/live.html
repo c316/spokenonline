@@ -2,7 +2,6 @@
     <div class="container-full text-center">
         <div class="row">
         <div class="col-lg-12 text-center" >
-
             <div class="col-lg-4 col-lg-offset-4" id="topCol">
                 {{#if removeTime}}
                     <div name="timeHeading" class="whiteText topMargin equalBottomMargin">
@@ -12,10 +11,10 @@
                     <div id="DateCountdown" data-date="2014-10-12 17:00:00"></div>
                 {{/if}}
             </div>
-            </div>
+        </div>
             {{#if showSideContent}}
             <div class="col-lg-2">
-                <p>Test Content</p>
+                <p>Test {{{sideBarContents}}}</p>
             </div>
             {{else}}
             {{/if}}
@@ -105,6 +104,15 @@
 </template>
 
 <template name="stream">
+    {{#if showVideoOnStream}}
+    <div class="jumbotron clearBackground removePadding">
+        <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; }
+        .embed-container iframe, .embed-container object, .embed-container embed
+        { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        </style>
+        <div class='embed-container'><iframe src='https://www.youtube.com/embed/y-jBJs2kXRo' frameborder='0' allowfullscreen></iframe></div>
+    </div>
+    {{else}}
     <div class="jumbotron clearBackground removePadding">
         <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow:
         hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object,
@@ -112,4 +120,5 @@
         </style><div class='embed-container'><iframe src='https://new.livestream.com/accounts/9791284/events/3335843/player?autoPlay=true&mute=false'
                                                      frameborder='0' scrolling="no" allowfullscreen></iframe></div>
     </div>
+    {{/if}}
 </template>

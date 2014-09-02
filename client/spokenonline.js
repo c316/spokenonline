@@ -243,6 +243,16 @@ Template.stream.rendered = function() {
 	//$('.noBottomPadding').css('marginTop', '40px');
 
 }
+Template.stream.helpers({
+	showVideoOnStream: function () {
+		if(this.show_video) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+});
 Template.live.helpers({
 	showLive: function () {
 		if (Session.equals('page', 'live') && (Email_List.findOne({_id: Session.get('params._id')}) !== undefined)) {
@@ -265,7 +275,7 @@ Template.live.helpers({
 		}
 	},
 	showSideContent: function () {
-		return Control_Panel.findOne(this._id).CheckPoint1;
+		return this.sidebar;
 	}
 });
 Template.live.events({
