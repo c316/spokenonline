@@ -117,8 +117,8 @@
       <file leaf-file-name="spokenonline.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/spokenonline.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28470254" vertical-offset="3012" max-vertical-offset="5321">
-              <caret line="189" column="26" selection-start-line="189" selection-start-column="26" selection-end-line="189" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.33286119" vertical-offset="3012" max-vertical-offset="5321">
+              <caret line="191" column="49" selection-start-line="191" selection-start-column="49" selection-end-line="191" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -979,8 +979,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/spokenonline.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28470254" vertical-offset="3012" max-vertical-offset="5321">
-          <caret line="189" column="26" selection-start-line="189" selection-start-column="26" selection-end-line="189" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.33286119" vertical-offset="3012" max-vertical-offset="5321">
+          <caret line="191" column="49" selection-start-line="191" selection-start-column="49" selection-end-line="191" selection-end-column="49" />
           <folding />
         </state>
       </provider>

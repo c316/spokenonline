@@ -187,9 +187,9 @@ function setupDate() {
   Template.base.helpers({
 	headerText: function () {
 		if (Session.equals('page', 'watch') || Session.equals('page', 'live')) {
-			return "Live on October 12th 5:00pm CDT";
+			return "Live on October 12th 5:00 pm CDT";
 		}else {
-			return "Join Us on October 12th 5:00pm CDT";
+			return "Join Us on October 12th 5:00 pm CDT";
 		}
 	},
 	showVideo: function () {
