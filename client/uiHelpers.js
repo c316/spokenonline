@@ -38,5 +38,5 @@ UI.registerHelper('learnMoreAttend', function () {
 });
 
 UI.registerHelper('promoVideoLink', function () {
-    return '//www.youtube.com/embed/CG2-UvcEA-s';
+    return '';
 });
