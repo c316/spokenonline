@@ -222,3 +222,6 @@ input.parsley-error,select.parsley-error,textarea.parsley-error {
 ul li a i {
     padding-top: 22%;
 }
+.remodal-close {
+    border: none;
+}
