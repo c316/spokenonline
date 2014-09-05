@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="121d4846-bff3-4664-ab20-288bf73111ed" name="Default" comment="">
+      <change type="DELETED" beforePath="Z:\spokenonline\client\compatibility\js\share.min.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/blue_logo_comp.png" afterPath="$PROJECT_DIR$/public/images/blue_logo_comp.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/spoken.ico" afterPath="$PROJECT_DIR$/public/images/spoken.ico" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/spoken_logo.jpg" afterPath="$PROJECT_DIR$/public/images/spoken_logo.jpg" />
