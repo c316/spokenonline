@@ -115,16 +115,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="email_list.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/publish/email_list/email_list.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="221">
-              <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="spokenonline.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/spokenonline.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -155,10 +145,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="uiHelpers.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="uiHelpers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/uiHelpers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.091644205" vertical-offset="0" max-vertical-offset="799">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
               <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
               <folding>
                 <marker date="1409946544094" expanded="true" signature="453:1069" placeholder="..." />
@@ -167,6 +157,16 @@
                 <marker date="1409946544094" expanded="true" signature="1167:1312" placeholder="..." />
                 <marker date="1409946544094" expanded="true" signature="1167:1806" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="head.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/head.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.1424581" vertical-offset="0" max-vertical-offset="716">
+              <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -220,7 +220,6 @@
         <option value="$PROJECT_DIR$/client/lib/js/ate.js" />
         <option value="$PROJECT_DIR$/client/lib/css/addthisevent.css" />
         <option value="$PROJECT_DIR$/client/compatibility/js/ate.js" />
-        <option value="$PROJECT_DIR$/client/head.html" />
         <option value="$PROJECT_DIR$/client/calendar.html" />
         <option value="$PROJECT_DIR$/client/compatibility/css/addthisevent.css" />
         <option value="$PROJECT_DIR$/client/attend.html" />
@@ -245,6 +244,7 @@
         <option value="$PROJECT_DIR$/client/landing.html" />
         <option value="$PROJECT_DIR$/client/spokenonline.html" />
         <option value="$PROJECT_DIR$/client/uiHelpers.js" />
+        <option value="$PROJECT_DIR$/client/head.html" />
       </list>
     </option>
   </component>
@@ -591,7 +591,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -826,13 +826,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/head.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7566064" vertical-offset="0" max-vertical-offset="719">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/compatibility/css/addthisevent.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.06827309" vertical-offset="0" max-vertical-offset="747">
@@ -1019,7 +1012,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/uiHelpers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.091644205" vertical-offset="0" max-vertical-offset="799">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
           <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
           <folding>
             <marker date="1409946544094" expanded="true" signature="453:1069" placeholder="..." />
@@ -1028,6 +1021,14 @@
             <marker date="1409946544094" expanded="true" signature="1167:1312" placeholder="..." />
             <marker date="1409946544094" expanded="true" signature="1167:1806" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/head.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1424581" vertical-offset="0" max-vertical-offset="716">
+          <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
+          <folding />
         </state>
       </provider>
     </entry>
