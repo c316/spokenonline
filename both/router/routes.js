@@ -11,9 +11,14 @@ Router.configure({
 
 Router.map(function () {
   this.route('landing', {path: '/spoken',
+    data: function () {
+        var params = this.params;
+        Session.set('params.video', this.params.video);
+    }
   });
 	this.route('welcome', {path: '/spoken/welcome',
 		data: function () {
+
 			return $("#DateCountdown").TimeCircles();
 		}
 	});

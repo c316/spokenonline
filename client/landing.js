@@ -24,4 +24,11 @@ Template.landing.events({
 Template.landing.rendered = function () {
 	$('.arrow-right').hide();
 	$('.arrow-left').hide();
+    if (Session.equals('params.video', 'yes')) {
+        $('.modal').remodal({
+            hashTracking: false
+        });
+        var modalSuccess = $.remodal.lookup[$('[data-remodal-id=modal_landing_video]').data('remodal')];
+        modalSuccess.open();
+    }
 };
