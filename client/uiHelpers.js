@@ -36,7 +36,3 @@ UI.registerHelper('learnMoreAttend', function () {
       Did we mention it is free! </p>\
     </div>";
 });
-
-UI.registerHelper('promoVideoLink', function () {
-    return '';
-});
