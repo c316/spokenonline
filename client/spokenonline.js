@@ -127,7 +127,7 @@ function setupDate() {
 			scrollTop: $("#email").offset().top
 		}, 600);
     },
-	'click [name=learnMore]': function(e,tmpl) {
+	'click, touchend [name=learnMore]': function(e,tmpl) {
 		  if ($.remodal) {
 			  $('.modal').remodal({
 				  hashTracking: false
@@ -136,7 +136,7 @@ function setupDate() {
 			  modalSuccess.open();
 		  }
 	},
-	'click [name=learnMore_attend]': function(e,tmpl) {
+	'click, touchend [name=learnMore_attend]': function(e,tmpl) {
 		if ($.remodal) {
 			$('.modal').remodal({
 				hashTracking: false
@@ -145,7 +145,7 @@ function setupDate() {
 			modalSuccess.open();
 		}
 	},
-	'click [name=q_a]': function(e,tmpl) {
+	'click, touchend [name=q_a]': function(e,tmpl) {
 		  if ($.remodal) {
 			  $('.modal').remodal({
 				  hashTracking: false
@@ -154,7 +154,7 @@ function setupDate() {
 			  modalSuccess.open();
 		  }
 	  },
-	  'click [name=q_a_attend]': function(e,tmpl) {
+	  'click, touchend [name=q_a_attend]': function(e,tmpl) {
 		  if ($.remodal) {
 			  $('.modal').remodal({
 				  hashTracking: false
@@ -163,7 +163,7 @@ function setupDate() {
 			  modalSuccess.open();
 		  }
 	  },
-    'click [name=timeHeading]': function(e,tmpl) {
+    'click, touchend [name=timeHeading]': function(e,tmpl) {
       if (Session.get('showTime')) {
         Session.set('showTime', false);
         setupDate();
@@ -175,10 +175,10 @@ function setupDate() {
       }, 20);
       }
     },
-	'click #attendButton': function () {
+	'click, touchend #attendButton': function () {
 		Router.go('/spoken/attend/register');
 	},
-	'click [name=give]': function() {
+	'click, touchend [name=give]': function() {
 		window.open('https://trashmountain.com/give');
 		$('[name=give]').css('')
 	}
