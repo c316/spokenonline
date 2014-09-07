@@ -68,6 +68,41 @@ height: 100%;
 .buttonText {
     font-size: 80%;
 }
+@media (min-width: 350px) {
+    .fullWidthButton {
+        width: 120px;
+        height: 60px;
+    }
+    .buttonText {
+        font-size: 50%;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+    .logoImage {
+        width: 140px;
+        vertical-align: baseline;
+        margin-bottom: 30px;
+    }
+    .fullWidthButton {
+        padding: 0;
+    }
+}
+@media (min-width: 650px) {
+    .fullWidthButton {
+        width: 200px;
+        height: 100px;
+    }
+    .buttonText {
+        font-size: 70%;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+    .logoImage {
+        width: 250px;
+        vertical-align: baseline;
+        margin-bottom: 30px;
+    }
+}
 @media (min-width: 1000px) {
     .fullWidthButton {
         width: 300px;
