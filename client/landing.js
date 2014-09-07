@@ -11,11 +11,11 @@ Template.landing.events({
     'mouseout [name=viewPage]': function (e, tmpl) {
     	$('.arrow-right').hide();
     },
-	'click, touchend [name=viewPage]': function() {
+	'click [name=viewPage]': function() {
 		console.log("viewPage Clicked");
 		Router.go('/spoken/watch');
 	},
-	'click, touchend [name=attendPage]': function() {
+	'click [name=attendPage]': function() {
 		console.log("attendPage Clicked");
 		Router.go('/spoken/attend');
 	}
