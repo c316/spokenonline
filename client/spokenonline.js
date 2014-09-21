@@ -294,7 +294,7 @@ Template.live.events({
 			$('.modal').remodal({
 				hashTracking: false
 			});
-			var modalSuccess = $.remodal.lookup[$('[data-remodal-id=modal_live_stream_q_a]').data('remodal')];
+			var modalSuccess = $.remodal.lookup[$('[data-remodal-id=modal_live_stream]').data('remodal')];
 			modalSuccess.open();
 		}
 	},
