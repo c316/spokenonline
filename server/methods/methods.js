@@ -5,7 +5,7 @@
 function mailchimpSubscribe (form) {
 	console.log("I made it to the top....of mailchimpSubscribe");
 	console.log(form._id);
-	HTTP.call("POST", "https://us3-api-mailchimp-com-23il29sepsny.runscope.net/2.0/lists/subscribe.format",
+	HTTP.call("POST", "https://us3.api.mailchimp.com/2.0/lists/subscribe.format",
 		{data:{
 			"apikey": Meteor.settings.mailchimpkey,
 			"id": "94e2b8146f",
