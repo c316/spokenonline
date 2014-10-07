@@ -2,10 +2,6 @@ function fillForm() {
 	$('#email').val("support@trashmountain.com");
 	$('#fname').val("Test");
 	$('#lname').val("Person");
-	$('#address').val("Address");
-	$('#city').val("City");
-	$('#state').val("State");
-	$('#zip').val("Zip");
 }
 
 function setupDate() {
@@ -55,10 +51,6 @@ function setupDate() {
 		    "email":      $('#email').val(),
 		    "fname":      $('#fname').val(),
 		    "lname":      $('#lname').val(),
-		    "address":    $('#address').val(),
-		    "city":       $('#city').val(),
-		    "state":      $('#state').val(),
-		    "zip":        $('#zip').val(),
 		    "created_at": new Date().getTime()
 	    }
 
@@ -79,10 +71,6 @@ function setupDate() {
 		$('#signupForm')[0].reset();
 		$('#fname').hide(100);
 		$('#lname').hide(150);
-		$('#address').hide(200);
-		$('#city').hide(250);
-		$('#state').hide(300);
-		$('#zip').hide(350);
 		$('#email').appendTo("#moveTo").animate(400);
 		$('#email').prop('disabled', true);
 		$('#email').attr("placeholder", "You're In! Check Your Email.");
@@ -105,18 +93,6 @@ function setupDate() {
 	});
 	$('#lname').show(200, function () {
 	  $('#lname').css("marginTop", "5px")
-	});
-	$('#address').show(250, function () {
-	    $('#address').css("marginTop", "5px")
-	});
-	$('#city').show(300, function () {
-		$('#city').css("marginTop", "5px")
-	});
-	$('#state').show(350, function () {
-		$('#state').css("marginTop", "5px")
-	});
-	$('#zip').show(400, function () {
-		$('#zip').css("marginTop", "5px")
 	});
       //Move the registerNow button to the bottom so users know what this is
       //for (to submit the form)

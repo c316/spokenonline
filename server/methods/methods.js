@@ -16,14 +16,7 @@ function mailchimpSubscribe (form) {
 			"merge_vars": {
 				"FNAME": form.fname,
 				"LNAME": form.lname,
-				"ID": form._id,
-				"ADDRESS": {
-					"addr1": form.address,
-					"city": form.city,
-					"state": form.state,
-					"zip": form.zip
-				},
-
+				"ID": form._id
 			},
 			"double_optin": false,
 			"update_existing": true
