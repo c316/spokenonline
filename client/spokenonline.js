@@ -274,10 +274,12 @@ Template.live.events({
 			modalSuccess.open();
 		}
 	},
-	'click [name=give]': function() {
-		window.open('https://trashmountain.com/give');
+	'click [name=give]': function(e) {
+		e.preventDefault();
+		window.open('https://trashmountain.com/donate');
 		$('[name=give]').css('')
 	}
 });
 Template.live.rendered = function () {
+
 };

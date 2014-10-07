@@ -1,6 +1,6 @@
 <template name="live">
     <div class="container-full text-center">
-        <div class="row">
+        <div class="row fix-horizontal-scrolling">
         <div class="col-lg-12 text-center" >
             <div class="col-lg-4 col-lg-offset-4" id="topCol">
                 {{#if removeTime}}
@@ -20,15 +20,15 @@
             {{/if}}
             <div class="col-lg-8 col-lg-offset-2">
                 {{#if showVideo}}
-                {{> video}}
+                    {{> video}}
                 {{else}}
                 {{/if}}
                 {{#if showLive}}
-                {{> stream}}
+                    {{> stream}}
                 {{else}}
                 {{/if}}
                 {{#if showPrompt}}
-                {{> prompt}}
+                    {{> prompt}}
                 {{else}}
                 {{/if}}
             </div>

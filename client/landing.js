@@ -31,4 +31,15 @@ Template.landing.rendered = function () {
         var modalSuccess = $.remodal.lookup[$('[data-remodal-id=modal_landing_video]').data('remodal')];
         modalSuccess.open();
     }
+    $('.modal').remodal({
+        hashTracking: false
+    });
+    var modalSuccess = $.remodal.lookup[$('[data-remodal-id=modal_live_event]').data('remodal')];
+    modalSuccess.open();
 };
+
+Template.live_event.events({
+    'click #live_event_link': function (e) {
+        $('.remodal-overlay').hide();
+    }
+});

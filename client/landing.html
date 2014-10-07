@@ -1,4 +1,7 @@
 <template name="landing">
+    <div class="alert alert-success float text-center" role="alert">
+        <a href="/spoken/live" class="alert-link">Looking for the live event page?  Click here</a>
+    </div>
     <div class="wrap">
         <div class="floatleft">
             <div class="textLeft">
@@ -38,4 +41,15 @@
             <div class='embed-container'><iframe src="https://www.youtube.com/embed/CG2-UvcEA-s" frameborder="0" allowfullscreen></iframe></div>
         </div>
     </div>
+    <!-- modal for the live event link -->
+    <div id="live_event_modal" class="modal" data-remodal-id="modal_live_event">
+        <div class="text-center">
+            {{> live_event}}
+        </div>
+    </div>
+</template>
+
+<template name="live_event">
+    <p>Looking for the live event page?</p>
+    <a id="live_event_link" href="/spoken/live">Click here</a>
 </template>

@@ -225,3 +225,7 @@ ul li a i {
 .remodal-close {
     border: none;
 }
+.fix-horizontal-scrolling {
+    margin-left: 0;
+    margin-right: 0;
+}
