@@ -64,7 +64,13 @@ Router.map(function () {
 			Email_List.findOne(this.params._id);
 			$("#DateCountdown").TimeCircles();
 			return Control_Panel.findOne('RwL6DMxwwmnH2sGTw');
-		}
+		},
+      action: function () {
+          if (this.ready())
+              this.render();
+          else
+              this.render('Loading');
+      }
 	});
 	this.route('calendar', {path: '/spoken/calendar',
 		data: function() {

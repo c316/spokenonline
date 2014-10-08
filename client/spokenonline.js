@@ -220,13 +220,16 @@ Template.stream.rendered = function() {
 
 }
 Template.stream.helpers({
-	showVideoOnStream: function () {
+	showLiveStream: function () {
 		if(this.show_video) {
 			return true;
 		}
 		else {
 			return false;
 		}
+	},
+	show_other: function () {
+		return this.image;
 	}
 });
 Template.live.helpers({
