@@ -54,7 +54,7 @@ Router.map(function () {
 	});
 	this.route('live', {path: '/spoken/live/:_id',
 		waitOn: function() {
-			Meteor.subscribe('control_panel', 'RwL6DMxwwmnH2sGTw');
+			Meteor.subscribe('control_panel', '5BuA4Frin8x22HAxz');
 			Meteor.subscribe('email_list', this.params._id);
 		},
 		data: function () {
@@ -63,14 +63,8 @@ Router.map(function () {
 			Session.set('params._id', this.params._id);
 			Email_List.findOne(this.params._id);
 			$("#DateCountdown").TimeCircles();
-			return Control_Panel.findOne('RwL6DMxwwmnH2sGTw');
-		},
-      action: function () {
-          if (this.ready())
-              this.render();
-          else
-              this.render('Loading');
-      }
+			return Control_Panel.findOne('5BuA4Frin8x22HAxz');
+		}
 	});
 	this.route('calendar', {path: '/spoken/calendar',
 		data: function() {
