@@ -246,10 +246,10 @@ Template.live.helpers({
 		}
 	},
 	headerText: function () {
-		return "Live On October 12th 5:00pm CST";
+		return "Welcome";
 	},
 	removeTime: function () {
-		return Session.equals("removeTime");
+		return this.time;
 	},
 	showPrompt: function () {
 		if (Session.equals('page', 'live') && (Email_List.findOne({_id: Session.get('params._id')}) === undefined)) {
