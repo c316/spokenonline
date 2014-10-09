@@ -113,6 +113,8 @@
                                                      frameborder='0' scrolling="no" allowfullscreen></iframe></div>
     </div>
     {{else}}
-        <img src="/spoken/images/{{image}}">
+    <div class="jumbotron clearBackground removePadding">
+        {{{show_other}}}
+    </div>
     {{/if}}
 </template>
