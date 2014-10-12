@@ -189,7 +189,7 @@ function setupDate() {
 	  }
 	},
 	showPrompt: function () {
-		if (Session.equals('page', 'live')) { //&& (Email_List.findOne({_id: Session.get('params._id')}) === undefined)
+		if (Session.equals('page', 'live') && (Email_List.findOne({_id: Session.get('params._id')}) === undefined)) {
 			return true;
 		} else{
 			return false;
